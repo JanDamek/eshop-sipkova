@@ -1,0 +1,143 @@
+zaplaceno_ok:
+  url: /:sf_culture/objednavka/zaplaceno/:hash/:obj_id.html
+  param: { module: objednavka, action: platbaok, sf_culture: cs }
+
+zaplaceno_no:
+  url: /:sf_culture/objednavka/nezaplaceno/:hash/:obj_id.html
+  param: { module: objednavka, action: platbano, sf_culture: cs }
+
+pay:
+  url: /:sf_culture/objednavka/zaplatit/:obj_id.html
+  param: { module: objednavka, action: pay, sf_culture: cs }
+
+objednavka_storno:
+  url: /:sf_culture/objednavka/storno/:obj_id.html
+  param: { module: objednavka, action: storno, sf_culture: cs }
+  
+doStorno:
+  url: /:sf_culture/objednavka/stornovat/:obj_id.html
+  param: { module: objednavka, action: dostorno, sf_culture: cs }
+
+webpay:
+  url: /:sf_culture/objednavka/platba/kartou/:obj_id.html
+  param: { module: webpay, action: index, sf_culture: cs }
+
+paypal:
+  url: /:sf_culture/objednavka/platba/paypal/:obj_id.html
+  param: { module: webpay, action: paypal, sf_culture: cs }
+  
+eplatba:
+  url: /:sf_culture/objednavka/platba/eplatba/:obj_id.html
+  param: { module: webpay, action: eplatba, sf_culture: cs }  
+
+zapomenute_heslo:
+  url: /:sf_culture/heslo.html
+  param: { module: kosik, action: forgoton, sf_culture: cs }
+  
+save_username:
+  url: /:sf_culture/save_user_data
+  param: { module: kosik, action: update, sf_culture: cs }
+  
+login:
+  url: /:sf_culture/login.html
+  param: { module: kosik, action: login, sf_culture: cs }
+  
+login_vel:
+  url: /:sf_culture/login/velkoobchod.html
+  param: { module: kosik, action: login_vel, sf_culture: cs }
+  
+logout:
+  url: /:sf_culture/logout.html
+  param: { module: kosik, action: logout, sf_culture: cs }
+  
+zmena:
+  url: /:sf_culture/zmena_stavu_kosiku
+  param: { module: kosik, action: zmena, sf_culture: cs }
+  
+zmena_pok:
+  url: /:sf_culture/zmena_stavu_pokladny
+  param: { module: kosik, action: zmena_pok, sf_culture: cs }
+  
+zmena_dor:
+  url: /:sf_culture/zmena_stavu_pokladny_doruceni
+  param: { module: kosik, action: zmena_dor, sf_culture: cs }
+
+platba_div:
+  url: /:sf_culture/zmena_platby_div
+  param: { module: kosik, action: platba_div, sf_culture: cs }
+
+pobo_div:
+  url: /:sf_culture/zmena_pobo_div
+  param: { module: kosik, action: pobo_div, sf_culture: cs }
+
+obj:
+  url: /:sf_culture/objednavka.html
+  param: { module: kosik, action: obj, sf_culture: cs }
+
+obj_final:
+  url: /:sf_culture/objednavka/dokonceni.html
+  param: { module: kosik, action: obj_final, sf_culture: cs }
+
+set_platba_div:
+  url: /:sf_culture/set_platby_div
+  param: { module: kosik, action: set_pl_div, sf_culture: cs }
+
+pokladna:
+  url: /:sf_culture/pokladna.html
+  param: { module: kosik, action: pokladna, sf_culture: cs }
+  
+register:
+  url: /:sf_culture/register.html
+  param: { module: kosik, action: register, sf_culture: cs }
+
+username:
+  url: /:sf_culture/uzivatel.html
+  param: { module: kosik, action: o_user, sf_culture: cs }
+
+zmena_user:
+  url: /:sf_culture/uzivatel/zmena.html
+  param: { module: kosik, action: username, sf_culture: cs }
+  
+obj_detail:
+  url: /:sf_culture/uzivatel/objednavka/:slug.html
+  param: { module: kosik, action: obj_detail, sf_culture: cs }
+
+#fak_detail:
+#  url: /:sf_culture/uzivatel/faktura/:slug.html
+#  param: { module: kosik, action: fak_detail, sf_culture: cs }
+#
+akce:
+  url: /:sf_culture/akce/detail/:slug.html
+  param: { module: akce, action: index, sf_culture: cs, page: 1 }
+
+produkt:
+  url: /:sf_culture/produkt/:slug.html
+  param: { module: produkt, action: index, sf_culture: cs}
+
+kosik:
+  url: /:sf_culture/kosik/:slug.html
+  param: { module: kosik, action: index, sf_culture: cs, slug: obsah }
+
+kategorie:
+  url:  /:sf_culture/:slug/:page.html
+  param: { module: kategorie, action: index, sf_culture: cs, page: 1 }
+
+homepage:
+  url:   /:sf_culture/:page.html
+  param: { module: homepage, action: index, sf_culture: cs, page: 1 }
+
+homepage2:
+  url:   /:sf_culture/
+  param: { module: homepage, action: index, sf_culture: cs, page: 1 }
+
+homepage3:
+  url:   /:sf_culture
+  param: { module: homepage, action: index, sf_culture: cs, page: 1 }
+  
+koupit:
+  url:  /:sf_culture/kosik/add/:slug.html
+  param: { module: kosik, action: add, sf_culure: cs }
+  
+detail:
+  url:  /:sf_culture/produkt/:slug.html
+  param: { module: produkt, action: index, sf_culure: cs }

@@ -1,0 +1,132 @@
+h3 {
+  font-size: 18px;
+  color: #187a77;
+  float: left;
+  width: 300px;
+  clear: both;
+  margin: 30px 0px 15px 0px;
+}
+h3 span {
+  color: #fff;
+  font-weight: bold;
+  background: url(pic/circle.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  display: block;
+  float: left;
+  text-align: center;
+  margin: 0px 15px 0px 0px;
+  font-size: 15px;
+}
+
+.registrace .coool {
+  width: 300px;
+  float: left; 
+}
+.prihlaseni .inp-text ,
+.registrace .inp-text {
+  background: url(pic/inp.png) no-repeat;
+  width: 180px;
+  height: 35px;
+  float: left;
+  padding: 0px 20px 0px 20px;
+  margin: 0px 20px 20px 0px;
+  border: none;
+  color: #6f6f6f;  
+}
+.prihlaseni .inp-text-75 ,
+.registrace .inp-text-75 {
+  background: url(pic/inp75.png) no-repeat;
+  width: 120px;
+  height: 35px;
+  float: left;
+  padding: 0px 20px 0px 20px;
+  margin: 0px 10px 20px 0px;
+  border: none;
+  color: #6f6f6f;  
+}
+.prihlaseni .inp-text-25 ,
+.registrace .inp-text-25 {
+  background: url(pic/inp25.png) no-repeat;
+  width: 50px;
+  height: 35px;
+  float: left;
+  text-align: center;
+  margin: 0px 20px 0px 0px;
+  border: none;
+  color: #6f6f6f;  
+}
+.submit-prihlasit {
+  background: url(pic/but_prihlasitse.png) no-repeat;
+  width: 96px;
+  height: 31px;
+  display: block;
+  border: none;
+}
+.submit-registrovat {
+  background: url(pic/but_registrovatse.png) no-repeat;
+  width: 136px;
+  height: 31px;
+  display: block;
+  border: none;
+}
+.submit-prihlasit:hover , 
+.submit-registrovat:hover {
+  background-position: 0px -31px;
+}
+.but-decor {
+  color: #47515c;
+  background: url(pic/but_decor.png) no-repeat;
+  padding: 0px 0px 0px 26px;
+  height: 25px;
+  line-height: 25px;
+  display: block;
+  float: left;
+  margin: 0px 30px 0px 0px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.but-decor:hover {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.obchodni-podminky-off {
+  background: url(pic/obchodni_podminky.jpg) no-repeat;
+  width: 218px;
+  background-position: 0px -72px;
+  height: 72px;
+  float: left;
+  margin: 0px 20px 20px 0px;  
+}
+.obchodni-podminky-on {
+  background: url(pic/obchodni_podminky.jpg) no-repeat;
+  width: 218px;
+  height: 72px;
+  float: left;
+  margin: 0px 20px 20px 0px;  
+}
+.obchodni-podminky-on span,
+.obchodni-podminky-off span {
+  display: none;
+}
+.inp-select {
+  background: url(pic/inp_select.png) no-repeat;
+  width: 160px;
+  height: 35px;
+  float: left;
+  overflow: hidden; 
+}
+.inp-select:hover {
+  background-position: 0px -35px;
+}
+.inp-select select {
+  width: 145px;
+  height: 35px;
+  -webkit-appearance:none;
+  appearance:none;
+  border: none;
+  padding: 0px 0px 0px 15px;
+  background-color: transparent;
+  color: #6f6f6f; 
+}

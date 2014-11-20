@@ -1,0 +1,23 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Ceny
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          ceny
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        display: [Zbozi, Skupina, Zakaznik, typ, typ_slevy, cena, Mena, sleva]
+        title:  Seznam alternativních cen pro zboží, skupinu, zákazníka
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

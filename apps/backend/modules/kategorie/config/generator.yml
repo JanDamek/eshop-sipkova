@@ -1,0 +1,39 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           kategorie
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          kategorie
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        name: 
+          label: Jedinecny nazev
+        title: 
+          label: Nazev
+        parent_id: 
+          label: Patri do kategorie
+        popis: 
+          label: Popis
+        poradi: 
+          label: Poradi
+        pozice:
+          label: Pozice
+        typ:
+          label: Typ stranky
+        keywords: 
+          label: Klicova slova
+        description: 
+          label: SEO popis
+      list: ~
+      filter: ~
+      form: ~
+      edit: ~
+      new: ~

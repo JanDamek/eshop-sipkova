@@ -1,0 +1,42 @@
+# gallery, gallery image
+
+Gallery:
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      unique: false
+      fields: [title]
+      canUpdate: true
+  columns:
+    title:       { type: string(100), notnull: true }
+    description: 
+      type: string(255)
+      notnull: true
+    keywords: 
+      type: string(255)
+      notnull: true
+    path:        { type: string(255), notnull: true }
+    is_active:  { type: boolean, notnull: true, default: true }
+  relations:
+    GalleryImages:
+      class: GalleryImage
+      local: id
+      foreign: gallery_id
+      type: many
+
+GalleryImage:
+  actAs:
+    Timestampable: ~
+  columns:
+    gallery_id: { type: bigint(20), notnull: true }
+    is_active:  { type: boolean, notnull: true, default: true }
+    path:       { type: string(255), notnull: true }
+    alt:        { type: string(60), notnull: true }
+    title:      { type: string(100), notnull: false }
+    ord:        { type: integer }
+  relations:
+    Gallery:
+      local: gallery_id
+      foreign: id
+      onDelete: CASCADE
+      foreignAlias: GalleryImages

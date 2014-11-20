@@ -1,0 +1,273 @@
+pay_pal:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                PayPal
+    module:               pay_pal
+    prefix_path:          /pay_pal
+    column:               id
+    with_wildcard_routes: true
+
+web_pay:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                WebPay
+    module:               web_pay
+    prefix_path:          /web_pay
+    column:               id
+    with_wildcard_routes: true
+
+e_platba:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ePlatba
+    module:               e_platba
+    prefix_path:          /e_platba
+    column:               id
+    with_wildcard_routes: true
+
+dph:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                DPH
+    module:               dph
+    prefix_path:          /dph
+    column:               id
+    with_wildcard_routes: true
+
+
+zeme_urceni:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ZemeUrceni
+    module:               zeme_urceni
+    prefix_path:          /zeme_urceni
+    column:               id
+    with_wildcard_routes: true
+
+pobocky_doprava:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                PobockyDoprava
+    module:               pobocky_doprava
+    prefix_path:          /pobocky_doprava
+    column:               pobocka_id
+    with_wildcard_routes: true
+
+slozeni:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                slozeni
+    module:               slozeni
+    prefix_path:          /slozeni
+    column:               slozeni_id
+    with_wildcard_routes: true
+
+kosik:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Kosik
+    module:               kosik
+    prefix_path:          /kosik
+    column:               id
+    with_wildcard_routes: true
+
+ceny:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Ceny
+    module:               ceny
+    prefix_path:          /ceny
+    column:               id
+    with_wildcard_routes: true
+
+objednavky:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Objednavky
+    module:               objednavky
+    prefix_path:          /objednavky
+    column:               id
+    with_wildcard_routes: true
+
+polozky_obj:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                PolozkyObj
+    module:               polozky_obj
+    prefix_path:          /polozky_obj
+    column:               id
+    with_wildcard_routes: true
+
+polozky_fak:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                PolozkyFak
+    module:               polozky_fak
+    prefix_path:          /polozky_fak
+    column:               id
+    with_wildcard_routes: true
+
+platba:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Platba
+    module:               platba
+    prefix_path:          /platba
+    column:               id
+    with_wildcard_routes: true
+
+doprava:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Doprava
+    module:               doprava
+    prefix_path:          /doprava
+    column:               doprava_id
+    with_wildcard_routes: true
+
+akce:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                akce
+    module:               akce
+    prefix_path:          /akce
+    column:               id
+    with_wildcard_routes: true
+
+zaokrouhleni:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                zaokrouhleni
+    module:               zaokrouhleni
+    prefix_path:          /zaokrouhleni
+    column:               id
+    with_wildcard_routes: true
+
+mena_kurz:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                menaKurz
+    module:               mena_kurz
+    prefix_path:          /mena_kurz
+    column:               id
+    with_wildcard_routes: true
+
+mena:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                mena
+    module:               mena
+    prefix_path:          /mena
+    column:               id
+    with_wildcard_routes: true
+
+zakaznik:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                zakaznik
+    module:               zakaznik
+    prefix_path:          /zakaznik
+    column:               id
+    with_wildcard_routes: true
+
+skupina:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                skupina
+    module:               skupina
+    prefix_path:          /skupina
+    column:               id
+    with_wildcard_routes: true
+
+zbozi:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                zbozi
+    module:               zbozi
+    prefix_path:          /zbozi
+    column:               zbozi_id
+    with_wildcard_routes: true
+
+kategorie:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                kategorie
+    module:               kategorie
+    prefix_path:          /kategorie
+    column:               id
+    with_wildcard_routes: true
+
+stranky:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                stranky
+    module:               stranky
+    prefix_path:          /stranky
+    column:               id
+    with_wildcard_routes: true
+
+setting:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                setting
+    module:               setting
+    prefix_path:          /setting
+    column:               id
+    with_wildcard_routes: true
+    
+vymazat_cache:
+  url: /vymazat_cache
+  param: { module: setting, action: remove }
+  
+reindexace_vyhledavani:
+  url: /reindexace_vyhledavani
+  param: { module: setting, action: reindex }
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# pro galerie
+gallery:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Gallery
+    module:               gallery
+    prefix_path:          /gallery
+    column:               id
+    with_wildcard_routes: true
+
+gallery_sort_images:
+  url:  /gallery/:id/sort-images
+  param: { module: gallery, action: sortImages }
+
+gallery_delete_image:
+  url: /gallery/:id/delete
+  param: { module: gallery, action: deleteImage }
+
+# pro sfguard
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: zbozi, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

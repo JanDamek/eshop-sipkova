@@ -1,0 +1,78 @@
+Skupina:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: true
+#    I18n:
+#      fields: [title, popis]
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    name: {type: string(50), notnull: true, unique: true}
+    title: {type: string(50), notnull: true}
+    popis: clob
+    sleva: float
+
+Zakaznik:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [username]
+      canUpdate: true
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    username: {type: string(50), notnull: true, unique: true }
+    email: {type: string(255), notnull: true, unique: true }
+    password: {type: string(128), notnull: true }
+    skupina_id: integer
+    mena_id: integer
+    jmeno: string(50)
+    prijmeni: string(50)
+    organizace: string(50)
+    ulice: string(50)
+    psc: string(6)
+    mesto: string(50)
+    dorucit_id: integer
+    ico: string(15)
+    jmeno_ico: string(50)
+    prijmeni_ico: string(50)
+    organizace_ico: string(50)
+    ulice_ico: string(50)
+    psc_ico: string(6)
+    mesto_ico: string(50)
+  relations:
+    Skupina:
+      local: skupina_id
+      onDelete: CASCADE
+      foreign: id
+    Mena:
+      local: mena_id
+      onDelete: CASCADE
+      foreign: id
+    ZemeUrceni:
+      local: dorucit_id
+      foreign: id
+  
+Kosik:
+  actAs:
+    Timestampable:
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    session_id: string(32)
+    zakaznik_id: integer
+    zbozi_id: integer
+    mena_id: integer
+    mno: float
+  relations:
+    Zakaznik:
+      local: zakaznik_id
+      foreign: id
+    Zbozi:
+      local: zbozi_id
+      foreign: zbozi_id
+    Mena:
+      local: mena_id
+      foreign: id
+    

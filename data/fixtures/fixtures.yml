@@ -1,0 +1,1255 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+sfGuardGroup:
+  Group_admin:
+    name:           admin
+    description:    Administrator group
+    Permissions:    [Permission_admin]
+
+sfGuardPermission:
+  Permission_admin:
+    name:           admin
+    description:    Administrator permission
+    
+sfGuardUser:
+  honza74:
+    first_name:     Jan
+    last_name:      Damek
+    email_address:  damekjan74@gmail.com
+    username:       honza74
+    password:       katka
+    is_super_admin: true
+    Groups:         [Group_admin]
+  sipkova:
+    first_name:     Olga 
+    last_name:      Šípková
+    email_address:  info@lekarnaproradost.cz
+    username:       sipkova
+    password:       12345
+    is_super_admin: true
+    Groups:         [Group_admin]
+  david:
+    first_name:     David
+    last_name:      
+    email_address:  info@senzaddubio.cz
+    username:       david
+    password:       12345
+    is_super_admin: true
+    Groups:         [Group_admin]
+  tomas:
+    first_name:     Tomáš
+    last_name:      Vaněk
+    email_address:  info@pocitacservis.cz
+    username:       tomas
+    password:       12345
+    is_super_admin: true
+    Groups:         [Group_admin]
+
+CisloObj:
+  CisloObj_1:
+    title: null
+    created_at: '2012-10-24 16:46:21'
+    updated_at: '2012-10-24 16:46:21'
+Gallery:
+  Gallery_1:
+    title: 'Hot Burn'
+    description: 'Spalovač tuků s Chilli papričkami'
+    keywords: 'chilli,  hubnutí, spalovač tuků, hot burn'
+    path: /uploads//hot-burn.png
+    is_active: false
+    created_at: '2012-06-04 19:57:39'
+    updated_at: '2012-06-04 19:57:39'
+    slug: hot-burn
+Stranky:
+  Stranky_1:
+    Kategorie: Kategorie_4
+    name: 'O nas'
+    title: 'O SPOLEČNOSTI'
+    perex: ''
+    popis: "<p>Společnost WHCS (World Health Care Shop) se již několik let věnuje vývoji, výrobě a prodeji potravinových doplňků prvotřídní kvality.<br />Produkty dodáváme jak na český tak i zahraniční trh. <br /><br />Doplňky stravy WHCS vyvíjíme ve spolupráci s týmem lékařů a dalšími odborníky. Hlavní ingrediencí jsou výtažky z rostlin a minerály. V doplňcích stravy WHCS nenajdete zbytečné vedlejší látky. Pro nás je důležitá především kvalita a účinnost přípravků.<br /><br />Naše produkty se zaměřují na řešení problémů s nadváhou, obezitou, zadržováním vody v tkáních, otoky, toxickou zátěží organismu. Dodávají energii a celkově přispívají k zdravějšímu životnímu stylu.<br /> </p>\r\n<p>Doplňky stravy WHCS vyrábíme v České republice a v USA. Splňují Evropské normy jakosti a nejvyšší standardy kvality.</p>"
+    enabled: true
+    is_homepage: false
+    keywords: 'WHCS, doplňky stravy, potravinové doplňky, nadváha, obezita, prodej, ingredience'
+    description: WHCS
+    created_at: '2012-07-01 14:20:43'
+    updated_at: '2012-11-04 10:38:10'
+    slug: o-nas
+  Stranky_2:
+    Kategorie: Kategorie_1
+    name: Úvod
+    title: 'Doplňky stravy WHCS'
+    perex: ''
+    popis: "<p>ROTUJÍCÍ BANNERY</p>\r\n<p>1. PRODUKTOVÝ BANNER - NOVINKA - HOT BURN S CHILLI  - PÁLÍ, ALE JEN TUKY</p>\r\n<p>2. IMAGE FOTOGRAFIE ŠTÍHLÉ POSTAVY - FAT BURNER THERMO  -ŠTÍHLÁ LINIIE A SPOUSTA ENERGIE</p>\r\n<p>2. BANNER NA QUICK DREN - PROTI  ZADRŽOVÁNÍ VODY, DETOXIKUJE, ZMÍRŇUJE PROJEVY CELULITIDY</p>\r\n<p> </p>\r\n<p>TEXT </p>"
+    enabled: true
+    is_homepage: true
+    keywords: 'WHCS, uvod'
+    description: WHCS
+    created_at: '2012-07-01 14:22:27'
+    updated_at: '2012-11-06 10:22:36'
+    slug: uvod
+  Stranky_3:
+    Kategorie: Kategorie_2
+    name: Partneri
+    title: 'Partneři a prodejní místa'
+    perex: ''
+    popis: "<p><span><span><strong>Praha 4<br /></strong></span></span><a href=\"http://www.zdravi-vitaminy-doplnky.cz/titulni-strana/whcs\">http://www.zdravi-vitaminy-doplnky.cz/titulni-strana/whcs<br /></a>Na Dolinách 41</p>\r\n<p><strong>Praha 6<br /></strong><a href=\"http://studio-relaxace.webnode.cz/\">http://studio-relaxace.webnode.cz/<br /></a>Brandejsovo nám 7, Suchdol </p>\r\n<p><strong>Ústí nad Labem<br /></strong>Moskevská 7, <a href=\"http://www.keepyoung.cz/?page=keepyoung/kontakty\">Studio Keep Young</a></p>\r\n<p><span>Lékárna u Divadla</span></p>\r\n<p><span><span><span><strong>Napajedla<br /></strong></span></span></span>Obchod Pohoda - vše pro zdraví</p>\r\n<p><span><span><strong>Zlín<br /></strong></span></span>Výživová poradna a prodejna Zdravý obchůdek<br />nám. Práce 1099 (budova tržnice 99)</p>\r\n<p><span><span><strong>Hradec Králové - nově<br /></strong></span></span>Prodejna Atelier Helene<br />Komenského 266, Hradec Králové<br />Zdravé svačinky, dárky na míru, floristika, bytové doplňky </p>\r\n<p><span><span><strong>Nový Bydžov - nově<br /></strong></span></span>Studio Fontána, zdravotní středisko<br />Jungamannova 1575, Nový Bydžov<br />Zdravotní masáže</p>\r\n<p> </p>\r\n<hr />\r\n<p><span>Objednané zboží si můžete <strong>vyzvednout</strong> i <strong>osobně</strong> a to na pobočkách <strong>Uloženky</strong> po České republice a v Bratislavě na Slovensku. </span><span>Osobní vyzvednutí si navolíte v objednávce.<br /><br />SEZNAM MÍST OSOBNÍHO ODBĚRU <br /><br /></span></p>\r\n<p><strong><span><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Praha</a></span></strong></p>\r\n<ul>\r\n<li>\r\n<p><span><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Uloženka.cz, 5. května 1109/63, Praha 4 (odběr objednávek)</a></span></p>\r\n</li>\r\n<li>\r\n<p><span><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Uloženka.cz, Kolbenova 931/40b, Praha 9 (odběr objednávek)</a></span></p>\r\n</li>\r\n</ul>\r\n<p><strong><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Brno</a></strong></p>\r\n<ul>\r\n<li><span><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Uloženka.cz, Leitnerova 975/34, Brno (odběr objednávek)</a></span></li>\r\n<li>\r\n<p><span><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Uloženka.cz, Černopolní 54/245, Brno (odběr objednávek)</a></span></p>\r\n</li>\r\n</ul>\r\n<p><strong><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Ostrava</a></strong></p>\r\n<ul>\r\n<li><span><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Uloženka.cz, Chopinova 483/8, Ostrava (odběr objednávek)</a></span></li>\r\n</ul>\r\n<p><strong><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Hradec Králové</a></strong></p>\r\n<ul>\r\n<li><span><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Uloženka.cz, Pražská 293/12, Hradec Králové (odběr objednávek)<br /> </a></span></li>\r\n</ul>\r\n<p><span style=\"text-decoration: underline;\"><strong><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">O</a>lomouc</strong></span></p>\r\n<ul>\r\n<li><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Uloženka.cz, Wellnerova 1322/3B, Nová ulice - Olomouc (odběr objednávek)</a></li>\r\n</ul>\r\n<p> </p>\r\n<p><strong><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Bratislava</a></strong></p>\r\n<ul>\r\n<li>\r\n<p><span><a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">Uloženka.cz, Chorvátska 1, Bratislava, Slovensko (odběr objednávek)</a></span></p>\r\n</li>\r\n</ul>\r\n<p><span> </span></p>"
+    enabled: true
+    is_homepage: false
+    keywords: 'Partneri, uloženka, osobní odběr, prodejny'
+    description: Partneri
+    created_at: '2012-07-01 14:24:02'
+    updated_at: '2012-11-04 17:23:02'
+    slug: partneri
+  Stranky_4:
+    Kategorie: Kategorie_5
+    name: Kontakrty
+    title: Kontakty
+    perex: 'Eshop - prodej doplńků stravy WHCS'
+    popis: "<p><strong>E-mail</strong>: <a href=\"mailto:info@lekarnaproradost.cz\">info@lekarnaproradost.cz</a><br />             <a href=\"http://mce_host/backend.php/stranky/4/%20velkoobchod@lekarnaproradost.cz\">velkoobchod@lekarnaproradost.cz</a></p>\r\n<p><strong>Telefon</strong>: 773 516 377</p>\r\n<p><strong>Skype</strong>: Lékarna pro radost</p>\r\n<p> </p>\r\n<p><strong>Sídlo společnosti:</strong></p>\r\n<p>WHCS s.r.o. <br />Holečkova 99                        Číslo účtu: 4163329001/5500<br />150 00 Praha 5                      IČ: 28874196</p>\r\n<p> </p>\r\n<p><strong><span style=\"color: #ff9900;\">ČASTO KLADENÉ DOTAZY</span><br /><br />KDY MI DORUČÍTE ZBOŽÍ, KDYŽ OBJEDNÁVKU UHRADÍM PŘEDEM? <br /><br /></strong>- Uhrazenou objednávku odesíláme v den přijetí platby na bankovní účet WHCS.<br />- Doba dodání: 1-2 pracovní dny (Česká republika) a 2-4 pracovní dny (Slovensko) <br />- Po odeslání obdržíte sledovací číslo zásilky přepravující společnosti <br /> </p>\r\n<p><strong>KDY MI DORUČÍTE ZBOŽÍ NA DOBÍRKU?<br /><br /></strong>- Objednávky přijaté do 14hod jsou odeslány na dobírku tentýž den. <br />- Doba dodání: 1-2 pracovní dny (Česká republika) a 2-4 pracovní dny (Slovensko) <br /> </p>\r\n<p><strong><strong>MOHU SI ZBOŽÍ ZAKOUPIT OSOBNĚ?<br /><br /></strong></strong>- Seznam prodejních míst zde: <a href=\"../../../cs/partneri/1.html\">PRODEJ</a></p>\r\n<p> </p>\r\n<p><strong><strong><strong>JE ZBOŽÍ VYSTAVENÉ NA ESHOPU IHNED K DOSTÁNÍ?<br /><br /></strong></strong></strong>- Všechny produkty jsou skladem. Prodleva v dodání neexistuje.<br /> </p>\r\n<p><strong><strong><strong>ZASÍLÁTE ZBOŽÍ NA SLOVENSKO?<br /><br /></strong></strong></strong>- Ano, zboží na Slovensko zasíláme. Možný je také osobní odběr  na pobočce Uloženky v Bratislavě. Podrobnosti jak objednávat <a href=\"../../../cs/jak-nakupovat/1.html\">zde</a>. </p>\r\n<p> </p>\r\n<p><span style=\"color: #99cc00;\"><strong>VÁNOČNÍ OBJEDNÁVKY</strong></span><br />Pokud chcete mít zboží zakoupené z našeho e-shopu pod stromečkem včas, je nutné odeslat objednávku nejpozději do 19-20.12.<br />24.12. (pondělí).<br /> </p>"
+    enabled: true
+    is_homepage: false
+    keywords: 'kontakt, whcs, skype, lekarna pro radost'
+    description: Kontakt
+    created_at: '2012-07-01 14:25:40'
+    updated_at: '2012-11-04 17:28:59'
+    slug: kontakrty
+  Stranky_6:
+    Kategorie: Kategorie_6
+    name: 'Obchodní podmínky, Reklamace'
+    title: 'Obchodní podmínky, Reklamace'
+    perex: ''
+    popis: "<p><strong>Provozovatel internetového portálu</strong></p>\r\n<p>Název společnosti: WHCS s.r.o.<br /> Ulice a číslo popisné: Holečkova 99<br /> Město a PSČ: Praha, 150 00<br /> Stát: Česká republika<br /> IČ: 28874196<br /> DIČ: CZ28874196</p>\r\n<p><strong>Odpovědná osoba a kontakt: Olga Šípková</strong></p>\r\n<p><strong>Pracovní doba</strong></p>\r\n<p><strong>1) O registraci</strong></p>\r\n<p>\"Prohlašujeme, že data slouží pouze pro účely identifikace při nákupu ve společnosti \"WHCS\" a nebudou poskytnuty třetím osobám ani jinak zneužity. Potvrzením registrace souhlasím se zasíláním nabídkových e-mailů z internetového obchodu firmy \"WHCS\", v souladu se zákonem č. 480/2004 Sb. O některých službách informační společnosti.\"</p>\r\n<p>Nabídkové e-maily budou zasílány maximálně dvakrát do měsíce a velikost jednotlivých e-mailových zpráv nepřekročí 100kB. Službu zasílání novinek e-mailem můžete kdykoliv zrušit na e-mailové adrese:\"info@lekarnaproradost.cz\", nebo na uvedené pevné adrese.</p>\r\n<p>Objednávky lze uskutečnit i bez registrace.</p>\r\n<p><strong>2) Přijetí a vyřízení objednávky, kupní smlouva</strong></p>\r\n<p>Objednávka kupujícího je návrhem kupní smlouvy a samotná kupní smlouva je uzavřena momentem doručení závazného souhlasu kupujícího i prodávajícího s tímto návrhem (závazným potvrzením objednávky ze strany prodávajícího). Od tohoto momentu mezi kupujícím a prodávajícím vznikají vzájemná práva a povinnosti.</p>\r\n<p>Uzavřením kupní smlouvy kupující stvrzuje, že se seznámil s těmito obchodními podmínkami, včetně reklamačních podmínek, a že s nimi souhlasí. Na tyto obchodní podmínky a reklamační řád je kupující dostatečným způsobem před vlastním uskutečněním objednávky upozorněn a má možnost se s nimi seznámit.</p>\r\n<p>Prodávající si vyhrazuje právo zrušit objednávku nebo její část před uzavřením kupní smlouvy v těchto případech: zboží se již nevyrábí nebo nedodává nebo se výrazným způsobem změnila cena dodávaného zboží. V případě, že tato situace nastane, prodávající bude neprodleně kontaktovat kupujícího za účelem dohody o dalším postupu. V případě, že Kupující zaplatil již část nebo celou částku kupní ceny, bude mu tato částka převedena zpět na jeho účet, k uzavření Kupní smlouvy nedojde.</p>\r\n<p>Všechny objednávky přijaté tímto obchodem jsou závazné. Objednávku lze zrušit před její expedicí. V případě, že nebude objednávka zrušena do doby před expedicí, a bude expedována, může být po objednateli požadována náhrada nákladů spojená s expedicí zboží. O přijetí objednávky jste automaticky informován elektronickou poštou – e-mailem. </p>\r\n<p><strong>Storno objednávky</strong></p>\r\n<p>Pokud provedete storno objednávky, kterou jste odeslali po 14hodině do 12 hodin, považujeme objednávku za zrušenou. <br />Objednávky odeslané před 14hodinou je nutné stornovat do 14hodin tentýž den. Storno můžete poslat e-mailem případně provést telefonicky. Při zrušení objednávky je nutné uvést Vaše jméno, e-mail a číslo objednávky.</p>\r\n<p><strong>3) Záruka</strong></p>\r\n<p>Ke každé zásilce obdržíte elektronický  daňový doklad zaslaný na Vámi uvedenou emailovou adresu. Záruční lhůta začíná běžet datumem uvedeným na dokladu. Záruční lhůta je uvedena u každého výrobku v detailu zboží. Ve sporných případech může být záruční lhůta prodloužena o 5 (slovy pět) dní jako náhrada za čas dopravy.</p>\r\n<p><strong>4) Rozpor s kupní smlouvou - obecné informace</strong></p>\r\n<p>V případě, že věc při převzetí kupujícím není ve shodě s kupní smlouvou (dále jen „rozpor s kupní smlouvou“), má kupující právo na to, aby prodávající bezplatně a bez zbytečného odkladu věc uvedl do stavu odpovídajícího kupní smlouvě, a to podle požadavku kupujícího buď výměnou věci; není-li takový postup možný, může kupující požadovat přiměřenou slevu z ceny věci nebo od smlouvy odstoupit. To neplatí, pokud kupující před převzetím věci o rozporu s kupní smlouvou věděl nebo rozpor s kupní smlouvou sám způsobil. Rozpor s kupní smlouvou, který se projeví během šesti měsíců ode dne převzetí věci, se považuje za rozpor existující již při jejím převzetí, pokud to neodporuje povaze věci nebo pokud se neprokáže opak.</p>\r\n<p>Na zboží poskytujeme záruční dobu danou zákonem.</p>\r\n<p><strong>5) Právo Spotřebitele odstoupit od smlouvy</strong></p>\r\n<p>Pokud je kupní smlouva uzavřena pomocí prostředků komunikace na dálku (v internetovém obchodě), má spotřebitel v souladu s § 53 odst. 7 občanského zákoníku právo odstoupit od smlouvy do 14 dní od převzetí zboží. V takovém případě spotřebitel kontaktuje prodávajícího a nejlépe písemně uvede, že odstupuje od smlouvy s uvedením čísla objednávky, data nákupu a čísla účtu pro vrácení peněz. Peníze je možné vrátit též v hotovosti v sídle společnosti. Odstoupení od smlouvy musí být doručeno nejpozději poslední den 14 denní lhůty. Ve zvláštních případech může být s přihlédnutím na okolnosti prodloužena lhůta vrácení, ne však déle než 30 dní od doručení.</p>\r\n<p>Toto ustanovení zákona však nelze chápat jako možnost bezplatného zapůjčení zboží. Spotřebitel v případě využití práva na odstoupení od smlouvy do 14 dní od převzetí plnění, musí dodavateli vydat vše, co na základě kupní smlouvy získal. Pokud to již není dobře možné (např. v mezidobí bylo Zboží zničeno nebo spotřebováno), musí spotřebitel poskytnout peněžitou náhradu jako protihodnotu toho, co již nemůže být vydáno. Pokud je vrácené Zboží poškozeno jen částečně, může prodávající uplatnit na spotřebiteli právo na náhradu škody a započíst svůj nárok na vrácenou kupní cenu. Prodávající je v takovém případě povinen vzniklou škodu prokázat. Prodávající spotřebiteli v takovém případě vrací jen takto sníženou kupní cenu.</p>\r\n<p>Na kupní cenu, která má být kupujícímu vrácena, může prodávající navíc započíst své skutečně vynaložené náklady spojené s vrácením Zboží (náklady na přepravu apod.).</p>\r\n<p>Právo na odstoupení od smlouvy spotřebitel nemá, v případě smluv:</p>\r\n<ul>\r\n<li>na poskytování Služeb, jestliže s jejich plněním bylo s jeho souhlasem započato před uplynutím lhůty 14 dnů od převzetí plnění,</li>\r\n<li>na dodávku zboží nebo Služeb, jejichž cena závisí na výchylkách finančního trhu nezávisle na vůli Prodávajícího,</li>\r\n<li>na dodávku zboží upraveného podle přání Kupujícího nebo pro jeho osobu, jakož i zboží, které podléhá rychlé zkáze, opotřebení nebo zastarání,</li>\r\n<li>na dodávku audio a video nahrávek a počítačových programů, porušil-li Kupující jejich originální obal,</li>\r\n<li>na dodávku novin, periodik a časopisů, spočívajících ve hře nebo loterii.</li>\r\n</ul>\r\n<p><strong>6) Doručení a dodací podmínky</strong></p>\r\n<p>Některé zásilky mohou být rozděleny do více balíků. Poštovné zůstává beze změny.</p>\r\n<p>Veškeré zásilky sledujeme až do jejich doručení, snažíme se tak předcházet problémům, které při doručování vznikají.</p>\r\n<p>Jak postupovat při vracení zboží:</p>\r\n<p>1) Připravte zásilku dle popisu níže. Jakmile budete vědět kdy a kde zásilku budeme moci vyzvednout, kontaktujte nás.<br /> 2) Zboží, které budete zasílat zpět na naši adresu zašlete dle popisu níže vámi zvoleným přepravcem.</p>\r\n<p>Jak zásilku připravit</p>\r\n<p>Zásilka musí být kompletní (včetně příslušenství a veškeré dokumentace) a ve stavu, v jakém jste jej převzali při dodávce. Ke zboží přiložte doklad o koupi. Vždy prosím použijte balícího papíru nebo kartonu, tak aby nemohlo během přepravy dojít k polepení, popsání či jinému znehodnocení původních obalů. Neposílejte zboží na dobírku, doporučujeme Vám zboží pojistit. Peníze vám budou vráceny na pouze na bankovní účet (nezapomeňte ho uvést) a to obvykle do 3 pracovních dnů od obdržení zásilky. V případě vrácení zboží bude částka ponížena o přepravní náklady (neplatí pro reklamace!).</p>\r\n<p><strong>7) Způsoby úhrady</strong></p>\r\n<p>Veškeré způsoby úhrady, lze vybrat před výběrem dopravy. Všechny způsoby platby jsou zahrnuty v ceně dopravy.<br /> předplatba - při výběru této možnosti obdržíte zálohový list se všemi údaji k platbě. Zboží budeme expedovat po obdržení platby na bankovní účet.<br /> dobírka - objednané zboží Vám zašleme poštou a při převzetí toto zboží uhradíte v hotovosti.<br /> osobní odběr - platí v hotovosti při osobním odběru.<br /> platební karta</p>\r\n<p><strong>8) Bezpečnost</strong></p>\r\n<p>Při platbě platebními kartami se nemusíte bát zneužití. Využíváme prověřenou platební bránu s protokolem 3-D secure, podporovaným karetními asociacemi.</p>\r\n<p>Všechny interní informace (hesla, jména, operace) se šifrují. Pro zvýšení rychlosti nešifrujeme obecné informace (informace o jednotlivých položkách zboží).</p>\r\n<p><strong>9) Reklamace</strong></p>\r\n<p>V případě, že zboží, které jste od nás obdrželi, je poškozené či nefunkční, postupujte dle reklamačního řádu. Vrácení zboží z důvodu odstoupení od smlouvy je popsáno v bodu 6. Obchodních podmínek.</p>\r\n<p><strong>10) Reklamační řád</strong></p>\r\n<p>Výrobky, na které se vztahuje právo uplatnění reklamace musí být předány k posouzení ihned po zjištění závady, musí být čisté a s náležitými doklady a popisem závady, případně označeným místem závady.</p>\r\n<p><strong>Jak postupovat</strong></p>\r\n<ol start=\"1\">\r\n<li>V případě reklamace můžete zvolit dvě možnosti, postupujte dle popisu níže: Zašlete výrobek na adresu - \"kontaktní adresa\". Přeprava je hrazena stranou prodávajícího. Jakmile budete vědět kdy a kde zásilku budeme moci vyzvednout, kontaktujte nás. Zásilka musí být kompletní (včetně příslušenství a veškeré dokumentace) a ve stavu, v jakém jste jej převzali při dodávce. Ke zboží přiložte doklad o koupi. Vždy prosím použijte balícího papíru nebo kartonu, tak aby nemohlo během přepravy dojít k polepení, popsání či jinému znehodnocení původních obalů. Neposílejte zboží na dobírku, v takovém případě nebude zboží převzato. Doporučujeme Vám zboží pojistit.</li>\r\n<li>Ihned po obdržení zboží obdržíte reklamační protokol</li>\r\n<li>Zboží musí být pro přepravu řádně zabaleno, tak aby nedošlo k jeho dalšímu případnému poškození.</li>\r\n<li>Vadné nebo poškozené zboží bude vyměněno nebo bude vrácena kupní cena.</li>\r\n<li>Ke zboží musí být přiloženy veškeré listiny, které nakupující se zbožím obdržel, tedy například paragon, záruční list a jiné.</li>\r\n<li>Prodávající nepřebírá odpovědnost za škody vyplývající z provozu produktů, funkčních vlastností a škod z neodborného používání produktů, stejně jako škod způsobených vnějšími událostmi a chybnou manipulací. Na vady tohoto původu se nevztahuje ani poskytnutá záruka.</li>\r\n<li>Zboží je z hygienických důvodů k reklamaci přijato pouze řádně vyčištěné.</li>\r\n<li>Pokud výrobce poskytuje záruku delší, je uvedena u zboží v katalogu.</li>\r\n<li>U zamítnutých reklamací mohou být účtovány náklady na reklamační řízení a manipulační poplatky.</li>\r\n<li>O vyřízení reklamace budete informováni e-mailem, případně SMS. Stejně jako při dodání objednávky budete informováni o expedici balíku a termínu doručení.</li>\r\n</ol>\r\n<p>Děkujeme Vám za čas, který jste strávili přečtením obchodních podmínek.</p>\r\n<p>Váše \"Lékárna pro radost\"</p>\r\n<p>Obchodní podmínky jsou platné od 15.11.2012 do odvolání.<br /> Informace pro kupující: v případě změny obchodních podmínek, jsou platné obchodní podmínky, které byly v platnosti k datumu nákupu.</p>\r\n<p> </p>"
+    enabled: true
+    is_homepage: false
+    keywords: 'obchodní podmínky'
+    description: 'obchodní podmínky'
+    created_at: '2012-11-04 19:24:44'
+    updated_at: '2012-11-04 20:38:02'
+    slug: obchodni-podminky-reklamace
+  Stranky_7:
+    Kategorie: Kategorie_7
+    name: 'Ochrana soukromí'
+    title: 'Ochrana soukromí'
+    perex: ''
+    popis: "<p>Informace o zákaznících jsou uchovávány v souladu s platnými zákony České republiky, zejména se zákonem o ochraně osobních údajů č. 101/2000 Sb. ve znění pozdějších dodatků a předpisů. Společnost Internet Mall, a.s. je registrovaným správcem osobních údajů, veškeré údaje získané od zákazníků užívá výhradně pro vnitřní potřebu společnosti a neposkytuje je třetím osobám.</p>\r\n<p>Výjimku představují externí dopravci, kterým jsou osobní údaje zákazníků předávány v minimálním rozsahu, který je nutný pro bezproblémové doručení zboží. Bez výslovného souhlasu zákazníků nakládá společnost Internet Mall, a.s. s jejich osobními údaji pouze a výhradně v rozsahu, který připouští zákon o ochraně osobních údajů, a to především v § 5 odst. 2 písm. b) a v § 5 odst. 6.</p>\r\n<div class=\"notice\">\r\n<p class=\"m-0\">Osobní údaje zákazníků jsou plně zabezpečeny proti zneužití.</p>\r\n</div>\r\n<p>Data jsou uchovávána na zálohovaných serverech v majetku společnosti, které nejsou sdíleny s aplikacemi třetích osob. Společnost WHCS s.r.o.. je ve smyslu § 5 odst. 5 zák. o ochraně osobních údajů oprávněna za účelem nabízení obchodu a služeb subjektu údajů jako správce jeho osobních údajů získaných v souvislosti se svojí činností použít jeho jméno, příjmení a adresu. Tyto osobní údaje je možno na písemnou žádost zákazníka vymazat z databáze. Správce osobních údajů poté nesmí dále uvedené údaje zpracovávat.</p>"
+    enabled: true
+    is_homepage: false
+    keywords: 'Ochrana soukromí, WHCS'
+    description: 'Ochrana soukromí'
+    created_at: '2012-11-04 20:40:12'
+    updated_at: '2012-11-04 20:40:55'
+    slug: ochrana-soukromi
+  Stranky_8:
+    Kategorie: Kategorie_8
+    name: 'Jak nakupovat'
+    title: 'Jan nakupovat'
+    perex: ''
+    popis: "<p><strong>REGISTRACE, ODESLÁNÍ OBJEDNÁVKY</strong></p>\r\n<p>Objednávku můžete odeslat  i bez registrace.</p>\r\n<p>Zboží posíláme po České a Slovenské republice.</p>\r\n<p>Registrace přináší výhody (slevy, akce, speciální nabídky) pro nákup v eshopu www.lekarnaproradost.cz.</p>\r\n<p>ODESLÁNÍ OBJEDNÁVKY - POSTUP<br />Vložte vybrané zboží do košíku. V Nákupním košíku vyplňte objednávkový formulář. Vyplnění formuláře si řádně překontrolujte. Pokud souhlasíte s obsahem objednávky, objednávku odešlete. Obratem obdržíte informační email s potvrzením Vaší objednávky.</p>\r\n<p><strong>Veškeré zboží z eshopu www.lekarnaproradost.cz je skladem  a bude odesláno:<br /></strong>- v případě, že objednávku odešlete do 14 hodin, na dobírku, zboží odešleme tentýž den. Objednávky přijaté po 14hodině odešleme následující pracovní den.<br />- v případě platby předem zásilku odešleme v den přijetí platby na bankovní účet WHCS. </p>\r\n<p><strong></strong><strong>Doba dodání: Česká republika 1-2pracovní dny, Slovensko: 3-4pracovní dny. </strong></p>\r\n<p> </p>\r\n<p><strong>CENY POŠTOVNÉHO</strong></p>\r\n<p><strong>1.  Dobírka:</strong><strong> 96,-Kč   /   4.6EUR (SLOVENSKO)</strong><br />Zboží odešleme prostřednictvím České pošty/Slovenské pošty<br />Poštovné je jednorázové.</p>\r\n<p><br /><strong>2.  Platba příkazem, platební kartou</strong><strong>: 39,-Kč</strong><br />Zboží odešleme  prostřednictvím České pošty jako <strong>cenný balík do ruky</strong>. Poštovné: 39,-Kč. Doporučujeme!</p>\r\n<p>Platba převodem:<br />Objednávku je třeba  uhradit v plné výši včetně poštovného na účet WHCS  pod příslušným variabilním symbolem. Variabilní symbol je číslo objednávky. <br /><br />Zboží je vyexpedováno v den nebo následující den po přijetí částky za zboží v plné výši na účet WHCS.<br />Doba dodání: 1-2 pracovní dny od data připsání platby za objednávku na účet WHCS.</p>\r\n<p><strong>Bankovní údaje pro platbu v Kč <br /></strong>Název banky: Raiffeisenbank<br />Název účtu: WHCS<br />Číslo účtu: <strong><strong>4163329001</strong>, </strong>Kód banky: <strong>5500</strong>.</p>\r\n<p><strong>3. Paypal: 39,-Kč<br /></strong>Paypal je bezpečná a nejvíce využívaná forma úhrady za zboží.<br /><br /><strong>4. E-Konto: 39,-Kč<br /></strong>Tuto formu platby mohou využít majitelé bankovního účtů u Raiffeisenbank.</p>\r\n<p><strong>5. Osobní odběr: doporučujeme ! 16,-Kč  / 1.6EUR (SLOVENSKO)</strong></p>\r\n<p>Zboží lze vyzvednout osobně na pobočkách Uloženky (www.ulozenka.cz) v České a Slovenské republice.<br />Za osobní odběr Vám bude  přiúčtován manipulační poplatek ve výši:16,-Kč<br />Seznam míst pro osobní odběr <a href=\"http://www.ulozenka.cz/vydejni-a-podaci-mista\">zde.</a></p>\r\n<p><strong>OSOBNÍ ODBĚR - ULOŽENKA</strong></p>\r\n<p>Praha - zboží připraveno k vyzvednutí již v den přijetí objednávky a to od 18hod.<br />Ostatní města - následující pracovní den po přijetí objednávky</p>\r\n<hr />\r\n<p>Kontakt:</p>\r\n<p>WHCS s.r.o.<br />Holečkova 99<br />Praha 5  150 00</p>\r\n<p>Tel.: 773 516 377<br />E-mail: <a href=\"mailto:info@lekarnaproradost.cz\">info@lekarnaproradost.cz</a></p>\r\n<p>WHCS s.r.o. si rezervuje všechna práva pozměnit ceník a dodací lhůty bez předešlého upozornění.</p>\r\n<p>Aktualizace: 15.11.2012</p>"
+    enabled: true
+    is_homepage: false
+    keywords: 'poštovné, jak nakupovat, uloženka, dobírka, platba kartou, paypal'
+    description: 'Jak nakupovat'
+    created_at: '2012-11-04 20:58:21'
+    updated_at: '2012-11-04 20:59:53'
+    slug: jak-nakupovat
+  Stranky_9:
+    Kategorie: Kategorie_9
+    name: 'Dostupné platební metody'
+    title: 'Dostupné platební metody'
+    perex: ''
+    popis: "<p>Dostupné platební metody včetně podporovaných online plateb </p>\r\n<table border=\"0\">\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p>   logo</p>\r\n<p> </p>\r\n</td>\r\n<td>\r\n<p>Platební metoda</p>\r\n<p> </p>\r\n</td>\r\n<td>\r\n<p>Poplatek v Kč</p>\r\n<p> </p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<table border=\"0\">\r\n<tbody>\r\n<tr>\r\n<td><img src=\"../../uploads/webpay.png\" alt=\"\" /></td>\r\n<td> </td>\r\n<td>       </td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n<td> Online platba kartou         </td>\r\n<td> </td>\r\n</tr>\r\n<tr>\r\n<td> <img src=\"../../uploads/platime_online.jpeg\" alt=\"\" /></td>\r\n<td> Prima E-platba</td>\r\n<td> </td>\r\n</tr>\r\n<tr>\r\n<td> <img src=\"../../uploads/paypal.png\" alt=\"\" /></td>\r\n<td> Paypal</td>\r\n<td> </td>\r\n</tr>\r\n<tr>\r\n<td> </td>\r\n<td> Platba převodem</td>\r\n<td> </td>\r\n</tr>\r\n<tr>\r\n<td> </td>\r\n<td> Dobírka</td>\r\n<td>\r\n<p> 96,-<span class=\"Apple-tab-span\" style=\"white-space: pre;\">  </span></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td> </td>\r\n<td> Uloženka</td>\r\n<td>\r\n<p> 16,-</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p> </p>\r\n<p> </p>\r\n<table border=\"0\">\r\n<tbody>\r\n<tr>\r\n<td>\r\n<p>   logo</p>\r\n<p> </p>\r\n</td>\r\n<td>\r\n<p>Platební metoda</p>\r\n<p> </p>\r\n</td>\r\n<td>\r\n<p>Poplatek v Eur</p>\r\n<p> </p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td>\r\n<table border=\"0\">\r\n<tbody>\r\n<tr>\r\n<td><img src=\"../../uploads/webpay.png\" alt=\"\" /></td>\r\n<td> </td>\r\n<td>       </td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n<td> Online platba kartou         </td>\r\n<td> </td>\r\n</tr>\r\n<tr>\r\n<td> <img src=\"../../uploads/platime_online.jpeg\" alt=\"\" /></td>\r\n<td> Prima E-platba</td>\r\n<td> </td>\r\n</tr>\r\n<tr>\r\n<td> <img src=\"../../uploads/paypal.png\" alt=\"\" /></td>\r\n<td> Paypal</td>\r\n<td> </td>\r\n</tr>\r\n<tr>\r\n<td> </td>\r\n<td> Platba převodem</td>\r\n<td> </td>\r\n</tr>\r\n<tr>\r\n<td> </td>\r\n<td> Dobírka</td>\r\n<td>\r\n<p> </p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td> </td>\r\n<td> Uloženka</td>\r\n<td>\r\n<p> </p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p> </p>"
+    enabled: true
+    is_homepage: false
+    keywords: 'Platební metody, dobírka, paypal, platba kartou, uloženka'
+    description: 'platební metody'
+    created_at: '2012-11-04 21:33:57'
+    updated_at: '2012-11-04 21:36:45'
+    slug: dostupne-platebni-metody
+Setting:
+  Setting_1:
+    SiteName: 'Lékarna pro radost'
+    email: info@lekarnaproradost.cz
+    email2: velkoobchod@lekarnaproradost.cz
+    tel: '235 301 904'
+    mobil: '773 516 377'
+    pracovni_doba: ''
+    ulice: ''
+    mesto: ''
+    ga_code: ''
+    google_overeni: ''
+    Mena: Mena_1
+    SkupinaVychozi: Skupina_2
+    SkupinaHost: Skupina_1
+    SkupinaVel: Skupina_3
+    interval_typ: Den
+    interval_kontroly_meny: '1'
+    created_at: '2011-10-13 20:20:06'
+    updated_at: '2012-08-10 23:10:24'
+WebPay:
+  WebPay_1:
+    requestUrl: 'https://3dsecure.exemple.com/order.do'
+    merchantNumber: '00000001'
+    publicKey: /
+    privateKey: /
+    heslo: '0000001'
+    lastOrderNum: '1'
+    Mena: Mena_1
+    ZemeUrceni: ZemeUrceni_1
+    enabled: true
+    img: /uploads//webpay.png
+    created_at: '2012-10-25 11:12:53'
+    updated_at: '2012-10-25 11:54:19'
+  WebPay_2:
+    requestUrl: 'https://3dsecure.exemple.com/order.do'
+    merchantNumber: '00000001'
+    publicKey: /
+    privateKey: /
+    heslo: '0000001'
+    lastOrderNum: '1'
+    Mena: Mena_2
+    ZemeUrceni: ZemeUrceni_2
+    enabled: true
+    img: /uploads//webpay.png
+    created_at: '2012-10-25 11:13:11'
+    updated_at: '2012-10-25 11:54:35'
+  WebPay_3:
+    requestUrl: 'https://3dsecure.exemple.com/order.do'
+    merchantNumber: '00000001'
+    publicKey: /
+    privateKey: /
+    heslo: '0000001'
+    lastOrderNum: '1'
+    Mena: Mena_2
+    ZemeUrceni: ZemeUrceni_3
+    enabled: true
+    img: /uploads//webpay.png
+    created_at: '2012-10-25 11:13:25'
+    updated_at: '2012-10-25 11:54:48'
+Platba:
+  Platba_1:
+    name: 'Platba predem na ucet'
+    title: 'Platba predem na ucet'
+    Mena: Mena_1
+    Doprava: Doprava_1
+    celkem: '0.00'
+    cena: '0.00'
+    system_platby: OnLine
+    created_at: '2012-06-02 17:19:59'
+    updated_at: '2012-10-24 17:54:45'
+    slug: platba-predem-na-ucet
+  Platba_2:
+    name: 'Platba pri prevzeti'
+    title: 'Platba pri prevzeti'
+    Mena: Mena_1
+    Doprava: Doprava_1
+    celkem: '0.00'
+    cena: '19.00'
+    system_platby: OffLine
+    created_at: '2012-06-02 17:20:22'
+    updated_at: '2012-10-19 12:43:21'
+    slug: platba-pri-prevzeti
+  Platba_3:
+    name: 'Platba pri prevzeti'
+    title: 'Platba pri prevzeti'
+    Mena: Mena_2
+    Doprava: Doprava_2
+    celkem: '0.00'
+    cena: '0.50'
+    system_platby: OffLine
+    created_at: '2012-08-07 15:42:09'
+    updated_at: '2012-10-19 12:44:22'
+    slug: platba-pri-prevzeti-1
+  Platba_4:
+    name: 'Platba predem na ucet'
+    title: 'Platba predem na ucet'
+    Mena: Mena_2
+    Doprava: Doprava_2
+    celkem: '0.00'
+    cena: '2.00'
+    system_platby: OnLine
+    created_at: '2012-08-07 15:42:25'
+    updated_at: '2012-10-24 17:55:02'
+    slug: platba-predem-na-ucet-1
+  Platba_5:
+    name: 'Platba pri prevzeti'
+    title: 'Platba pri prevzeti'
+    Mena: Mena_1
+    Doprava: Doprava_3
+    celkem: '0.00'
+    cena: '29.00'
+    system_platby: OffLine
+    created_at: '2012-08-07 15:42:40'
+    updated_at: '2012-10-19 12:44:45'
+    slug: platba-pri-prevzeti-2
+  Platba_6:
+    name: 'Platba predem na ucet'
+    title: 'Platba predem na ucet'
+    Mena: Mena_1
+    Doprava: Doprava_3
+    celkem: '0.00'
+    cena: '10.00'
+    system_platby: OffLine
+    created_at: '2012-08-07 15:42:54'
+    updated_at: '2012-10-19 12:45:12'
+    slug: platba-predem-na-ucet-2
+  Platba_7:
+    name: 'Platba pri prevzeti'
+    title: 'Platba pri prevzeti'
+    Mena: Mena_2
+    Doprava: Doprava_4
+    celkem: '0.00'
+    cena: '0.60'
+    system_platby: OffLine
+    created_at: '2012-08-07 15:43:14'
+    updated_at: '2012-10-19 12:45:24'
+    slug: platba-pri-prevzeti-3
+  Platba_8:
+    name: 'Platba predem na ucet'
+    title: 'Platba predem na ucet'
+    Mena: Mena_2
+    Doprava: Doprava_4
+    celkem: '0.00'
+    cena: '0.10'
+    system_platby: OnLine
+    created_at: '2012-08-07 15:43:27'
+    updated_at: '2012-10-24 17:54:32'
+    slug: platba-predem-na-ucet-3
+PobockyDoprava:
+  PobockyDoprava_1:
+    name: 'Ulozenka bratislava'
+    Mena: Mena_2
+    title: Bratislava
+    celkem: '0.00'
+    cena: '0.50'
+    adresa: ''
+    provozni_doba: ''
+    mapa_adresa: ''
+    created_at: '2012-08-07 15:38:34'
+    updated_at: '2012-08-07 15:38:34'
+    slug: ulozenka-bratislava
+  PobockyDoprava_2:
+    name: 'Ulozenka praha 9'
+    Mena: Mena_1
+    title: 'Praha 9'
+    celkem: '0.00'
+    cena: '29.00'
+    adresa: ''
+    provozni_doba: ''
+    mapa_adresa: ''
+    created_at: '2012-08-07 15:39:01'
+    updated_at: '2012-08-07 15:39:01'
+    slug: ulozenka-praha-9
+  PobockyDoprava_3:
+    name: Brno
+    Mena: Mena_1
+    title: Brno
+    celkem: '0.00'
+    cena: '19.00'
+    adresa: ''
+    provozni_doba: ''
+    mapa_adresa: ''
+    created_at: '2012-08-07 15:39:18'
+    updated_at: '2012-08-07 15:39:18'
+    slug: brno
+  PobockyDoprava_4:
+    name: Olompouc
+    Mena: Mena_1
+    title: Olomouc
+    celkem: '0.00'
+    cena: '0.00'
+    adresa: ''
+    provozni_doba: ''
+    mapa_adresa: ''
+    created_at: '2012-08-07 15:39:37'
+    updated_at: '2012-08-07 15:39:37'
+    slug: olompouc
+Kategorie:
+  Kategorie_1:
+    name: Úvod
+    title: Úvod
+    popis: ''
+    poradi: '1'
+    enabled: true
+    pozice: 'Horní pruh'
+    typ: Stránky
+    keywords: uvod
+    description: uvod
+    created_at: '2011-10-13 20:20:39'
+    updated_at: '2012-11-04 11:43:50'
+    slug: uvod
+  Kategorie_2:
+    name: 'Partneři '
+    title: 'Partneři  a  Prodejní místa'
+    popis: ''
+    poradi: '2'
+    enabled: true
+    pozice: 'Horní pruh'
+    typ: Stránky
+    keywords: 'obchody, partneři'
+    description: 'obchody, partneři'
+    created_at: '2011-10-13 20:21:00'
+    updated_at: '2012-11-04 17:07:14'
+    slug: partneri
+  Kategorie_3:
+    name: Akce
+    title: Akce
+    popis: "Sleva pro registrované zákazníky 10%.\r\n"
+    poradi: '3'
+    enabled: true
+    pozice: 'Horní pruh'
+    typ: Akce
+    keywords: 'akce,sleva, registrovaní zákazníci'
+    description: 'akce, sleva, registrovaní zákazníci'
+    created_at: '2011-10-13 20:21:19'
+    updated_at: '2012-06-06 23:32:50'
+    slug: akce
+  Kategorie_4:
+    name: 'O nás'
+    title: 'O nás'
+    popis: ''
+    poradi: '4'
+    enabled: true
+    pozice: 'Horní pruh'
+    typ: Stránky
+    keywords: 'WHCS, doplňky stravy'
+    description: 'WHCS, doplňky stravy'
+    created_at: '2011-10-13 20:21:57'
+    updated_at: '2012-07-01 14:21:37'
+    slug: o-nas
+  Kategorie_5:
+    name: Kontakty
+    title: Kontakty
+    popis: test
+    poradi: '5'
+    enabled: true
+    pozice: 'Horní pruh'
+    typ: Stránky
+    keywords: 'Kontakty, WHCS'
+    description: Kontakty
+    created_at: '2011-10-13 20:22:13'
+    updated_at: '2012-11-03 13:16:22'
+    slug: kontakty
+  Kategorie_6:
+    name: 'Obchodní podmínky, Reklamace'
+    title: 'Obchodní podmínky, Reklamace'
+    popis: 'Obchodní podmínky'
+    poradi: '1'
+    enabled: true
+    pozice: 'Dolní pruh'
+    typ: Stránky
+    keywords: 'Obchodní podmínky'
+    description: 'Obchodní podmínky'
+    created_at: '2011-10-13 20:23:18'
+    updated_at: '2012-11-04 20:36:52'
+    slug: obchodni-podminky-reklamace
+  Kategorie_7:
+    name: 'Ochrana soukromí'
+    title: 'Ochrana soukromí'
+    popis: 'Ochrana soukromí'
+    poradi: '2'
+    enabled: true
+    pozice: 'Dolní pruh'
+    typ: Stránky
+    keywords: 'Ochrana soukromí'
+    description: 'Ochrana soukromí'
+    created_at: '2011-10-13 20:23:37'
+    updated_at: '2011-10-13 20:23:37'
+    slug: ochrana-soukromi
+  Kategorie_8:
+    name: 'Jak nakupovat'
+    title: 'Jak nakupovat'
+    popis: 'Jak nakupovat'
+    poradi: '3'
+    enabled: true
+    pozice: 'Dolní pruh'
+    typ: Stránky
+    keywords: 'Jak nakupovat'
+    description: 'Jak nakupovat'
+    created_at: '2011-10-13 20:23:58'
+    updated_at: '2011-10-13 20:23:58'
+    slug: jak-nakupovat
+  Kategorie_9:
+    name: 'Dostupné platební metody'
+    title: 'Dostupné platební metody'
+    popis: ''
+    poradi: '4'
+    enabled: true
+    pozice: 'Dolní pruh'
+    typ: Stránky
+    keywords: 'Dostupné platební metody'
+    description: 'Dostupné platební metody'
+    created_at: '2011-10-13 20:24:23'
+    updated_at: '2012-11-04 21:20:48'
+    slug: dostupne-platebni-metody
+  Kategorie_10:
+    name: 'Dieta a hubnutí'
+    title: 'Dieta a hubnutí'
+    popis: 'Dieta a hubnutí'
+    poradi: '1'
+    enabled: true
+    pozice: 'Levý sloupec'
+    typ: Zboží
+    keywords: 'Dieta a hubnutí'
+    description: 'Dieta a hubnutí'
+    created_at: '2011-10-13 20:31:48'
+    updated_at: '2012-11-03 12:24:55'
+    slug: dieta-a-hubnuti
+  Kategorie_11:
+    name: 'Energie a vitalita'
+    title: 'Energie a vitalita'
+    popis: 'Novinky a trendy'
+    poradi: '3'
+    enabled: true
+    pozice: 'Levý sloupec'
+    typ: Zboží
+    keywords: 'Novinky a trendy'
+    description: 'Novinky a trendy'
+    created_at: '2011-10-13 20:32:12'
+    updated_at: '2012-11-03 12:56:28'
+    slug: energie-a-vitalita
+  Kategorie_12:
+    name: 'Odvodnění a detox'
+    title: 'Zadržování vody a detox'
+    popis: Detox
+    poradi: '2'
+    enabled: true
+    pozice: 'Levý sloupec'
+    typ: Zboží
+    keywords: 'Detox, zadržování vody, otoky, odvodnění'
+    description: Detox
+    created_at: '2011-10-13 20:51:38'
+    updated_at: '2012-11-04 10:53:05'
+    slug: odvodneni-a-detox
+  Kategorie_13:
+    name: 'Posílení libida'
+    title: 'Posílení libida'
+    popis: 'Posílení libida'
+    poradi: '4'
+    enabled: true
+    pozice: 'Levý sloupec'
+    typ: Zboží
+    keywords: 'Posílení libida'
+    description: 'Posílení libida'
+    created_at: '2011-10-13 20:52:05'
+    updated_at: '2011-10-13 20:52:05'
+    slug: posileni-libida
+Zbozi:
+  Zbozi_1:
+#    Kategorie: Kategorie_10
+    name: 'SPALOVAČ TUKŮ FAT BURNER '
+    title: 'Fat Burner (thermogenní spalovač tuků)'
+    perex: '<p>SPALOVAČ TUKŮ S THERMOGENNÍM A STIMULAČNÍM ÚČINKEM<br />DOPRODEJ</p>'
+    perex_img: /uploads/fat-burner-ceska.jpg
+    nazev_img: ''
+    baleni: '1 BALENÍ OBSAHUJE 60  KAPSLÍ'
+    enabled: true
+    keywords: 'Fat Burner (thermogenní spalovač tuků)'
+    description: 'Fat Burner (thermogenní spalovač tuků)'
+    cena: '250.00'
+    DPH: DPH_3
+    Mena: Mena_1
+    popis: "<p><strong>Fat Burner je přírodní doplněk stravy s thermogením a stimulačním účinkem.<br /></strong><br />Fat Burner je doplněk  stravy, který pomáhá snižovat hmotnost tím, že zrychluje metabolismus. Díky působení Fat Burneru organismus spaluje více kalorií a ukládá méně tuků.<br />Fat Burner je thermogenní spalovač tuků, který štěpí již uložené tukové zásoby. Vyvolává thermogenezi, což je proces, kdy tělo vydává více energie i bez fycické činnosti. Obsahuje vysoké množství účinných látek, které pomáhají  spalovat přebytečné tuky, zrychlují metabolismus, omezují absorpci přijímaných tuků, dodávájí potřebnou energii a  tlumí pocit hladu.<br /><br />Jednou z aktivních látek je <strong class=\"western\">synefrin</strong>, který je svými účinky podobný látce <strong class=\"western\">efedrin,</strong> ovšem neprokazuje vedlejší účinky. Synefrin stimuluje tukový metabolismus a potlačuje chuť k jídlu. Další obsahovou látkou je kofein, který patří mezi nejsilnější stimulanty na světě. Stimuluje mozkovou činnost, upravuje metabolismus, snižuje chuť k jídlu a má mírné laxativní a diuretické účinky. Fat Burner dále obsahuje zelený čaj, který je znám tím, že spaluje velké množství kalorií a má nesčetně pozitivních účinků na zdraví. Vrba bílá, která je další účinnou látkou, obsahuje salicin, svými účinky podobný léku aspirinu. Salicin působí proti zánětům a nemůže chybět v žádném z kvalitních přípravků na hubnutí, jelikož v kombinaci s dalším látkami, intezivně podporuje redukci hmotnosti. V neposlední řade Fat Burner obsahuje vitamín B5, který se účastní při základní <strong class=\"western\">přeměně cukrů a tuků</strong> a mnoha dalších látek našeho těla. Kyselina pantotenová (Vitamín B5) má <strong class=\"western\">protistresové účinky</strong> a to především díky svému působení na nadledviny, kde podporuje tvorbu hormonů. Při jejím nedostatku dochází k vyčerpání nadledvin.<br /><br />Fat Burner doporučujeme užívat při <strong>redukční kúře</strong>, tam kde již úprava jídelníčku a fyzická aktivita nestačí.<br /><br /><strong class=\"western\">Účinky<br /></strong>Stimuluje tukový metabolismus<br />Redukuje nadváhu<br />Intenzivně podporuje odbourávání tuků<br />Snížuje chuť k jídlu, zamezuje nekontrolovatelné přejídání<br />Dodává energii a vitalitu</p>\r\n<p><strong>Složení<br />Guarana (kofein)</strong><span> Vysoce efektivní látka na spalování tuků. Guarana podporuje odolnost vůči fyzické a psychické únavě, zlepšuje krevní oběh, podporuje snížení hladiny cholesterolu, podporuje proces regenerace organismu po namáhavém výkonu, oddaluje proces stárnutí a omezuje pocit hladu. Stimulující účinky guarany přetrvávají až šest hodin po požití a umožňují zvýšit fyzickou aktivitu, aniž by způsobily některý z vedlejších účinků pozorovaných při častém pití kávy (srdeční arytmie, nervozita, žaludeční a střevní problémy). Guarana obsahuje přírodní kofein.<br /><br /><strong>Zelený čaj</strong><span> Zelený čaj obsahuje katechin a theanin. Tato dvojice, podle některých studií, zrychluje metabolismus o 4 až 5%. Zelený čaj v kombinaci s kofeinem má silně stimulační, termogenní a antioxidační účinky. Zvyšuje spalování kalorií. Pomáhá měnit tuky na energii. Působí příznivě na zažívací ústrojí. Stimuluje nervový systém.<br /><br /><strong>Pomerančovník hořký (Citrus Aurantium)</strong><span> Zatím nejúčinnější spalovač. alkaloid obsažený v extraktu z citrusových plodů. Termogenní účinek, mírné potlačení „návalů“ hladu - přejídání. Synefrin je látka blízká zakázané látce efedrinu, ale na rozdíl od efedrinu nemá jeho nežádoucí účinky. Podporuje trojí mechanismus vedoucí k redukci tělesné hmotnosti - odbourávání lipidů (tuků), zvyšování energetického výdeje a eliminaci nadbytečné vody v organizmu. Do dnešní doby bylo provedeno několik výzkumů, které dokazují, že potravinové doplňky obsahující synerfin pomáhají spalovat tuk, stejně jako několik dalších studií dokazujících, že synefrin má vliv na zvýšenou termogenezi (kalorický výdej - při zvýšené termogenezi tělo produkuje víc tepla, na jehož vytvoření se využívají tukové zásoby, a to dokonce nezávisle na fyzické činnosti).<br /><br /><strong>Kyselina pantothenová (D-pantothenic Acid)</strong><span> Vitamín, který se účastní metabolismu lipidů (jednoduchých tuků). Vitamín B5 zabraňuje usazování LDL cholesterolu (tzv. \"špatného\") v cévních stěnách. Používá se při zvýšené tělesné a duševní únavě. Antistresový vitamín.</span></span></span></span></p>\r\n<p><span><strong>Výtažek z vrby bílé (salix alba)</strong><span> Látka podobná aspirinu. Velmi důležitá součást přípravků na podporu hubnutí jelikož podporuje účinky stimulujících látek. Pomáhá zrychlovat proces spalování tuků.</span> </span></p>\r\n<p><strong class=\"western\">Působení spalovače tuků Fat Burner<br /></strong>Fat Burner je velmi silný spalovač, který obsahuje vyjímečné složení přírodních látek, které pomáhají odbourávat tuky a současně dodávají energii. Fat Burner je v prodeji od roku 2009 a stává se jedním z nejúspěšnějšíh spalovačů tuků na českém a slovenském trhu.<br /><br /><strong>Doporučené dávkování (maximální doporučená denní dávka): </strong>Užívejte 2 kapsle denně. Neužívejte 2 kapsle současně! Vždy zapijte minimálně 1 sklenicí vody. Při dávkování 2 x denně je nejvhodnější užívat  první kapsli ráno  nebo dopoledne společně s jídlem a druhou kapsli odpoledne společně s jídlem nebo po jídle. Poslední 2. kapsli berte nejpozději do 17hod.  Fat Burner obsahuje přírodní kofein.<br /><br /><strong>Upozornění: </strong>Není vhodný pro děti a mladistvé do 18 let, těhotné a kojící ženy. Uchovávejte mimo dosah dětí, v suchém a chladném prostředí. Není náhradou pestré stravy. Nepřekračujte doporučené dávkování. Před použitím konzultujte s lékařem pokud užíváte léky nebo trpíte nějakých chronickým onemocněním. Neužívejte přípravek s inhibitory MAO.  Fat Burner obsahuje přírodní zdroj kofeinu. <br /><br />Vyrobeno v USA<br /><strong>Notifikace Ministerstvem zdravotnictví </strong></p>"
+    skladem: null
+    min_mno: '1.00'
+    created_at: '2011-10-13 20:53:11'
+    updated_at: '2012-11-04 18:59:36'
+    slug: spalovac-tuku-fat-burner
+  Zbozi_2:
+#    Kategorie: Kategorie_11
+    name: 'ACAI BERRY SUPER ANTIOXIDANT'
+    title: 'Acai Berry Super Antioxidant'
+    perex: "<p>ACAI BERRY, EXTRAKT ACAI BERRY PRO PODPORU DETOXIKACE ORGANISMU. DODÁVÁ ENERGII</p>\r\n<p>DOPRODEJ</p>"
+    perex_img: /uploads/acai-berry.jpg
+    nazev_img: ''
+    baleni: '1 BALENÍ OBSAHUJE 30  KAPSLÍ'
+    enabled: true
+    keywords: 'Acai Berry Super Antioxidant'
+    description: 'Acai Berry Super Antioxidant'
+    cena: '199.00'
+    DPH: DPH_3
+    Mena: Mena_1
+    popis: "<p>Snížená cena z důvodu expirace : 4/2012<br />Expirace znamená, že nemůžeme garantovat sytost a barvu tobolky. Během testů jsme nezaznamenali žádné vedlejší účinky.<br /><br />Doplněk Acai Berry Superantioxidant je 100% přírodní přípravek s obsahem extraktu peckovitého ovoce acai. Neobsahuje vedlejší látky. S přípravkem Acai Berry chránít svůj organismus před volnými radikály, budete mít více energie, zlepší se Vám stav pleti.<br /><br />Díky svému obsahu vitamínů a minerálů, Acai Berry chrání pokožku před stárnutím. Zpomaluje projevy stárnutí celého těla. Je vhodným doplňkem ke každé dietě, jelikož obsahuje velké množství vlákniny, která dodá pocit sytosti a tím snižuje příjem kalorií. Vláknina upravuje zažívání, váže na sebe jedovaté a odpadní látky, které pak odvádí z organismu.<br />Mastné kyseliny v Acai Berry pomáhají snižovat cholesterol v krvi.<br /><br />Plody rostliny Acai vynikají svým obsahem antioxidantů, doplněk stravy Acai-Berry je proto ideální pro ochranu organismu před škodlivými účinky volných kyslíkových radikálů. Antioxidanty chrání integritu buněk, tkání i orgánů před nepříznivými důsledky působení okolního prostředí i zplodin metabolismu.</p>\r\n<p><strong>Účinky Acai Berry</strong><br />Vysoké množství antioxidantů, Acai Berry obsahuje 10x více antioxidantů než červené hrozny.<br />Posiluje imunitní systém<br />Bojuje proti volným radikálům<br />Zpomaluje stárnutí buněk<br />Detoxikuje organismus<br />Mírné diuretikum<br />Zrychluje metabolismus<br />Dodává energii a vitalitu<br />Pomáhá mírnít úzkost<br /><br /><strong>Acai Berry obsahuje <br /></strong>Vitamin: C, A, E, vitaminy řady B<br />Minerální látky: hořčík, draslík, vápník, bór, železo, molybden, měď<br />Flavonoidy<br />Nenasycené mastné kyseliny<br />Protokatechin<br />Epikatechin<br />Kumarin<br />Cyanidin<br />Pelargonin 3 glykosid<br />Kyselina galová, kyselina vanilová<br />Anthokyan<br />Vláknina </p>\r\n<p><strong>Vyživuje vlasy a pokožku<br /></strong><strong>Detoxikuje organismus <br />Chrání před volnými radikály<br />Dodává energii </strong></p>\r\n<p>Množství na jedno balení: 30 kapslí<br />Dávkování: 1-2 kapsle denně <br />Množství na jednu dávku: 500mg extrakt z bobulí ovoce Acai Berry<br /><br />Kapsli je možné otevřít a obsah vysypat.<br /><br />Notifikováno Ministerstvem zdravotnictví </p>"
+    skladem: null
+    min_mno: '100.00'
+    created_at: '2011-10-13 20:53:33'
+    updated_at: '2012-11-04 18:58:10'
+    slug: acai-berry-super-antioxidant
+  Zbozi_3:
+#    Kategorie: Kategorie_13
+    name: 'BYLINKOVÝ APETIT'
+    title: 'Bylinkový apetit'
+    perex: "<p>PŘÍRODNÍ AFRODIZIAKUM</p>\r\n<p>DOPRODEJ</p>"
+    perex_img: /uploads/bylinkovy-apetit.jpg
+    nazev_img: ''
+    baleni: '1 BALENÍ OBSAHUJE 30  KAPSLÍ'
+    enabled: true
+    keywords: 'Bylinkový apetit'
+    description: 'Bylinkový apetit'
+    cena: '169.00'
+    DPH: DPH_3
+    Mena: Mena_1
+    popis: "<p align=\"JUSTIFY\"><strong class=\"western\">Bylinkový apetit pro zvýšení libida.<br /><br /></strong>Snížená cena z důvodu expirace : 4/2012<br />Expirace znamená, že nemůžeme garantovat sytost a barvu tobolky. Během testů jsme nezaznamenali žádné vedlejší účinky. </p>\r\n<p align=\"JUSTIFY\"><strong>Bylinkový apetit </strong><strong> </strong>je přírodní doplněk stravy s obsahem 5ti aktivních látek, které pozitivně působí na zvýšení sexuálního apetitu. Bylinkový apetit působí na prokrvení pánevní oblasti a okamžitě obnovuje sexuální apetit. Přípravek je  určen těm ženám, které dlouhodobě trápí nízká sexuální touha (libido) a nedostatek energie. Bylinkový apetit je vyjímečných pomocníkem se silnými afrodiziakálními účinky. Znásobuje sexuální výdrž a dodává energii. <br /><br /><strong>Účinky<br /></strong>Pomáhá zvýšit libido <br />Silné afrodiziakální účinky<br />Působí rychle, zvyšuje sexuální prožitek<br />Obnovuje sexuální touhu<br />Pomáhá prožívat sex naplno<br />Dodává energii a vitalitu<br />Redukuje potíže spojené s PMS a klimakteriem<br />Pomáhá udržovat psychickou svěžest <br /><br /><strong>Doporučené dávkování<br /></strong>Jako doplněk stravy užívejte 1krát denně 30 min před intimním stykem. Zapijte vodou. Při dlouhodobém užívání regeneruje organismus a omlazuje.<br /><br /><strong>Kdy pocítím účinky?</strong><br />Bylinkový apetit je přípravek s rychlým nástupem účinku. </p>\r\n<p><strong>Složení</strong><br /><strong><strong>Epimedium</strong><strong><br /></strong></strong>Rostlina se silnými afrodizikálními účinky. Zvyšuje sexuální touhu a pocit rozkoše, odstraňuje zábrany. Celkově omlazuje a regeneruje organismus, prodlužuje věk.<strong><br /><strong>Chmel <br /></strong></strong>Zvyšuje chuť na sex, usnadňuje vzrušení a vyvrcholení. Navíc snižuje riziko výskytu srdečních onemocnění a brání rozvoji osteoporózy.<strong><br /><strong>L-arginin</strong> <br /></strong>Zvyšuje sexuální funkci u žen i u mužů. Obsahuje aminokyseliny, které zvyšují libido a znásobují sexuální výdž.<br /><strong>Niacin<strong><br /></strong></strong>Mocné afrodiziakum ke zvýšení ženského libida, zároveň nervový stimulant, zlepšuje stav pokožky a stimuluje krevní oběh.<strong><br /><strong>Prášek z kotvičníku zemního</strong> (tribulus terrestris) <br /></strong>Prastará léčivá bylina, která  byla a je považována za účinné afrodisiakum. Její užívání se projeviuje významným vzrůstem sexuálního libida. Dále napomáhá k zlepšení nálady a udržení tělesné i psychické svěžesti. U žen zvyšuje hladinu estrogenů, zmírňuje klimakterické obtíže a napomáhá odbourávání tělesného tuku. Kotvičník je běžnou ingrediencí v doplňcích stravy na zvýšení sexuálního libida. </p>\r\n<p align=\"JUSTIFY\"><strong>Dávkování (maximální doporučená denní dávka): </strong>1 kapsle denně (30kapslí), 30 min před intimním stykem. Zapijte vodou Nepřekračujte doporučené denní dávkování.</p>\r\n<p align=\"JUSTIFY\"><strong>Upozornění</strong>: Není vhodný pro děti,  těhotné a kojící ženy. Uchovávejte mimo dosah dětí, v suchém a chladném prostředí. Není náhradou pestré stravy. Nepřekračujte doporučené dávkování. Pokud berete léky, léčíte se nebo máte zdravotní potíže doporučujeme konzultaci s lékařem. Toto doporučení je platné pro všechny produkty  - doplňky stravy.</p>\r\n<p align=\"JUSTIFY\">Vyrobeno: USA<br />Notifikováno Ministerstvem zdravotnictví </p>\r\n<p align=\"JUSTIFY\"> </p>"
+    skladem: null
+    min_mno: '1.00'
+    created_at: '2011-10-13 20:54:23'
+    updated_at: '2012-11-04 18:58:32'
+    slug: bylinkovy-apetit
+  Zbozi_4:
+#    Kategorie: Kategorie_10
+    name: 'HOT BURN'
+    title: 'Spalovač tuků s chilli papričkami'
+    perex: '<p>SPALOVAČ TUKŮ NA PODPORU SPALOVÁNÍ TUKŮ S OBSAHEM CHILLI PAPRIČEK, SYNEFRINEM, ZELENÝM ČAJE A ZDRAVÝM ZÁZVOREM</p>'
+    perex_img: /uploads//hb_dsc_2422n.jpg
+    nazev_img: ''
+    baleni: '1 BALENÍ OBSAHUJE 60  TOBOLEK'
+    enabled: true
+    keywords: 'spalovač tuků, hot burn, chilli papričky, synefrin, zelený čaj, hubnutí, kapsaicin'
+    description: 'Spalovač tuků Hot Burn s chilli papričkami'
+    cena: '329.00'
+    DPH: DPH_3
+    Mena: Mena_1
+    popis: "<p><strong>HOT BURN s chilli papričkami, 60tbl <br /></strong><br />Moderní doplněk stravy  na  přírodní bázi pro podporu rychlejšího spalování tělesného tuku a kontrolu tělesné hmotnosti, pomáhá omezovat růst tukových buněk<br /><br /><strong><span style=\"text-decoration: underline;\">Pozitivní účinky:</span></strong></p>\r\n<ul>\r\n<li>Zrychluje metabolismus</li>\r\n<li>Pomáhá odbourávat nadbytečný tělesný tuk</li>\r\n<li>Zvyšuje spalování kalorií</li>\r\n<li>Snižuje nadměrnou chuť k jídlu</li>\r\n<li>Zamezuje růstu tukových buněk</li>\r\n<li>Přispívá k tělesné a duševní pohodě</li>\r\n<li>Podporuje hubnutí</li>\r\n<li>Urychluje peristaitiku (Pohyb střev)</li>\r\n</ul>\r\n<p><strong>Složení:<br /></strong><strong>Zázvor kořen 300 mg<br /></strong>Zázvor =  tajemství asijské štíhlosti. Pomáhá při nevolnosti, podporuje látkovou výměnu a přispívá ke zvýšené spotřebě energie. Příznivě působí na funkci trávicího systému, přispívá k uvolňování energie a ke zvýšení vitality.<br /><br /><strong>Zelený čaj 170mg <br /></strong>Příznivě ovlivňuje hladinu LDL cholesterolu v krvi, stimuluje spalování tuků a energetický výdej organismu. Omezuje chuť na sladké pokrmy a pocit hladu, pozitivně působí při snižování a udržování tělesné hmotnosti, příznivě ovlivňuje index tělesné hmotnosti (BMI). Povzbuzuje inzulínovou funkci, optimalizuje hladinu cukru v krvi. Přispívá k dobrému psychickému i fyzickému stavu.<br /><br /><strong>Chilli papričky 100 mg<br /></strong>Chilli je 100% přírodní spalovač tuků s thermogenními účinky. Obsahuje účinnou látku<em>kapsaicin. </em>Zrychluje metabolismus. Pomáhá před ukládáním tukových zásob. Studie dokazují úbytek tukových zásob během užívání látky kapsaicin (min.2 tablety denně v dostatečném množství.) Kapsaicin pozitivně působí na nervový systém. Spouští dobrou náladu. Kapsaicin má vliv na ztrátu hmotnosti a spalování tuků. A to především v oblasti pasu. Spouští totiž proces, který napomáhá lipolýze (tzn. spalování tuků). Produkuje v těle teplo, a tak dochází k metabolizaci tuků.  <br /><br /><strong>Pomerančovník hořký (synefrin) (6 % synefrin) 50 mg <br /></strong>Zdroj účinné látky synefrin. Pomáhá udržovat tukové tkáně v normálních mezích a kontrolovat tělesnou hmotnost. Posiluje trávení a štěpení tuků, stimuluje metabolismus tuků a cukrů. Přispívá k optimální relaxaci, k udržování psychické i fyzické pohody. Podporuje výdej energie.<br /><br /><span style=\"text-decoration: underline;\">Studie: Během užíváním doplňků stravy s obsahem látkekkapsacin a zeleného čajedošlo k úbytku tělesného tuku během 2 týdnů o 0,45kg (Zdroj: Studie: Waseda University, Japonsko<br /><br /></span><strong>Doporučené dávkování: 2 tablety za den během jídla, zapít dostatečným množstvím tekutin. <br /></strong><strong>Obsah: 60 tabolek</strong></p>\r\n<p><strong>Upozornění.<br /></strong>Není vhodný pro děti do 12 let, těhotné a kojící ženy. Uchovávejte mimo dosah dětí, v suchém a chladném prostředí. Není náhradou pestré stravy.Nepřekračujte doporučené dávkování. Před použitím konzultujte s lékařem pokud užíváte volně prodejné léky a léky na recept nebo trpíte nějakým onemocněním.<br /><strong>Notifikováno Ministerstvem zdravotnicví ČR<br /></strong></p>\r\n<hr />\r\n<p><strong><br /></strong><strong><em>Často kladené dotazy:</em></strong></p>\r\n<p><strong>Zajímalo by mne přesné dávkování tablet?<br /></strong>První tabletu užívejte ráno společně se snídaní, druhou tabletu přibližně po 5-6 hodinách, společně s jídlem. Tablety zapijte dostatečným množstvím vody. Nepřekračujte dávku 2 tablety denně.</p>\r\n<p><strong>Jaké jsou vedlejší účinky?<br /></strong>Nové složení Hot Burn je upraveno s ohledem na větší citlivost vůči kapsaicinu. Do současné doby nemáme negativní informace o tom, že by přípravek Hot Burn způsoboval pocity pálení v zažívacím ústrojí. Hot Burn nedoporučujeme užívat pokud se léčíte s onemocněním trávicího traktu.<br /><br /><strong>Kombinace přípravků<br /></strong>Hot Burn lze kombinovat s přípravky Acai Berry (detox) a Quick Dren (odvodnění, detox). Nelze užívat zároveň s doplňkem stravy Fat Burner Thermo.</p>\r\n<p> </p>"
+    skladem: null
+    min_mno: '1.00'
+    created_at: '2012-06-04 20:05:07'
+    updated_at: '2012-11-04 18:59:03'
+    slug: hot-burn
+  Zbozi_5:
+#    Kategorie: Kategorie_12
+    name: 'QUICK DREN'
+    title: 'Při potížích se zadržováním  vody a otoky'
+    perex: '<p>POZITIVNĚ PŮSOBÍ PŘI ZADRŽOVÁNÍ VODY A PŘI OTOCÍCH. POMÁHÁ DETOXIKOVAT ORGANISMUS, MŮŽE POMOCI S PROJEVY CELLULITIDY</p>'
+    perex_img: /uploads/quick-dren-eshop.png
+    nazev_img: ''
+    baleni: '1 BALENÍ OBSAHUJE 60  TABLET'
+    enabled: true
+    keywords: 'quick dren, pampeliška, zadržování vody, otoky, petržel, pýr, hořčík, vápník, draslík'
+    description: 'quick dren'
+    cena: '399.00'
+    DPH: DPH_3
+    Mena: Mena_1
+    popis: "<p style=\"text-align: justify;\"><strong>Quick Dren</strong> je doplněk stravy na přírodní bázi, který působí na lidský organismus silou vhodně zvolené kombinace bylinek a minerálů. <br />Řeší potíže s nadměrným  zadržováním vody v těle, zmírňuje otoky, pomáhá odvádět odpadní látky a toxiny, zmírňuje projevy celulitidy, upravuje zažívání, podporuje hubnutí.</p>\r\n<p><strong>Složení</strong>:<br />Pampeliška (smetanka lékařská)<br />Pýr<br />Peržel<br />Hořčík<br />Draslík<br />Vápník <br /><br /><strong>Účinky</strong>:<br />Posiluje diuretickou aktivitu močového systému<br />Stimuluje funkci ledvin<br />Příznivě ovlivňuje jaterní funkci<br />Pomáhá udržovat rovnováhu vody a minerálů v tkáních<br />Podporuje energetický metabolismus<br />Optimalizuje funkci trávicího traktu<br />Harmonizuje psychický a fyzický stav<br />Pomáhá při PMS<br /><br /><strong>Pampeliška</strong> působí výborně na lidský metabolismus, již ve starém Řecku se pampeliška používala k léčbě vodnatelnosti a potížích s játry. Navíc podporuje tvorbu inzulínu a tím brání rozvoji cukrovky. Působí jako detoxikátor a odvodňovač. <strong>Petržel</strong> je jedno z nejznámějších diuretik, pozitivně působí na ledviny. Petržel je vhodné užívat právě při otocích. <strong>Pýr</strong> odstraňuje toxiny z těla, pomáhá odvést přebytečnou vodu, je výborný proti otokům ať jsou kdekoliv.<br /><br />Když tělo odvodňujeme, ztrácíme mnoho minerálů, zejména <strong>draslík</strong> a <strong>hořčík</strong>, který je třeba během odvodňovací kúry doplňovat, abychom zabránili křečím a nebyli jsme unaveni. <br /><br /><strong>Vápník</strong> je také důležitý. Průzkumy prokazují, že lidé, kteří mají nízký příjem vápníku mají častější potíže s ukládáním vody v těle.<br /><br /><strong>Prevence při otocích a zadržování vody v těle:<br /></strong>Doporučuje se omezit příjem minerálu sodíku: Solení, uzeniny, fast-food, tvrdé a tavené sýry, konzervy a instantní výrobky, slané ryby (slanečky, zavináče..), minerální vody s vyšším obsahem sodíku, umělá sladidla (většina je na bázi sodíku)<br />Doplnit draslík ve formě potravin nebo doplňků stravy: Draslík napomáhá vylučování sodíku.<br />Pít dostatečné množství tekutin (čaje, stolní voda)</p>\r\n<p><strong><br />Quick Dren řeší potíže se zadržováním vody v těle ať už jsou kdekoliv</strong></p>\r\n<p>Quick Dren je přípravek k podpoře funkce vylučovací soustavy a k detoxikaci a pročištění organismu.</p>\r\n<p><strong>Doporučujeme užívat při potížích:</strong></p>\r\n<ul>\r\n<li>zadržování vody v tkáních</li>\r\n<li>otoky, ať už jsou kdelikov</li>\r\n<li>nesprávná funkce ledvin</li>\r\n<li>potíže se zažíváním</li>\r\n<li>zadržování vody, otoky při PMS</li>\r\n<li>nadváha</li>\r\n</ul>\r\n<p><strong>Pýr plazivý </strong>podporuje vylučovací funkci močového traktu, stimuluje činnost ledvin, pomáhá zbavovat tělo přebytečné vody, přispívá k pročištění organismu. Podporuje činnost trávicího systému, posiluje činnost jater a žlučníku, příznivě působí při hubnutí. Přispívá k dobrému zdraví kloubů.<br /><strong>Smetanka lékařská</strong> působí povzbudivě na močový systém a diuretickou funkci, pomáhá detoxikovat organismus. Stimuluje vylučování žluče a trávicích šťáv, povzbuzuje peristaltiku střev. Chrání jaterní tkáň, blahodárně působí na jaterní činnost a funkci žlučníku. Pomáhá udržovat správnou kyselost v žaludku. Příznivě působí na kůži při akné. Obsahuje antioxidačně působící látky, chrání buňky před destruktivním působením kyslíkových radikálů. Přispívá k dobrému psychickému a fyzickému stavu.<br /><strong>Petržel zahradní </strong>podporuje vylučovací funkci ledvin a aktivitu močového systému, přispívá k fyzické pohodě. Zklidňuje trávicí systém při podráždění. Obsahuje látky s antioxidačním ochranným účinkem.<br /><strong>Draslík</strong> hraje důležitou roli v udržování rovnováhy vody a minerálů v tkáních, je důležitý pro správné svalové a nervové funkce, harmonizuje srdeční činnost, pomáhá udržovat normální krevní tlak. <br /><strong>Vápník</strong> je nezbytný pro normální svalovou funkci a činnost nervové soustavy, hraje důležitou roli v energetickém metabolismu a v udržování normální tělesné hmotnosti. Pomáhá udržovat zdravé kosti a zuby, ovlivňuje funkci trávicích enzymů. Je nezbytný pro udržování správné krevní srážlivosti, příznivě působí na revitalizační procesy v tkáních.<br /><strong>Hořčík</strong> pomáhá v těle udržovat rovnováhu minerálů a distribuci tekutin. Je nezbytný pro svalovou činnost včetně práce srdečního svalu, přispívá ke snížení únavy a vyčerpání. Podporuje udržování zdravých kostí a zubů, je důležitý pro biosyntézu bílkovin. Přispívá k udržování normálních psychických funkcí.</p>\r\n<p><strong>Doporučené dávkování: </strong>2 tablety za den během jídla, zapít dostatečným množstvím tekutin. Dodržujte pitný režím. Neužívejte po 17 hod. <br /><br /><strong>Upozornění: </strong>Není vhodný pro děti do 3 let. Uchovávejte mimo dosah dětí, v suchém a chladném prostředí. Není náhradou pestré stravy. Nepřekračujte doporučené dávkování. Nekupujte v případě porušení obalu.<br /><strong>Hmotnost obsahu:</strong> 60 g ± 5%.<br /><br /><strong>Notifikováno Min. Zdr. OVZ-35.1-22.11.2011-82931 </strong><br /><strong>Pharmdata kód WHCS s.r.o. :7003728, PDK kód QuickDren: 2668607</strong></p>"
+    skladem: null
+    min_mno: '1.00'
+    created_at: '2012-06-07 13:03:54'
+    updated_at: '2012-11-04 18:59:19'
+    slug: quick-dren
+  Zbozi_6:
+#    Kategorie: Kategorie_10
+    name: 'FAT BURNER THERMO'
+    title: 'FAT BURNER THERMO'
+    perex: '<p>THERMOGENNÍ SPALOVAČ TUKŮ NA PODPORU SPALOVÁNÍ TUKŮ, ZRYCHLENÍ METABOLISMU, ODDÁLENÍ POCITU HLADU  A DODÁNÍ ENERGIE</p>'
+    perex_img: /uploads//fbt_dsc_5035.jpg
+    nazev_img: ''
+    baleni: '1 BALENÍ OBSAHUJE 60  TOBOLEK'
+    enabled: true
+    keywords: 'fat burner thermo, spalovač tuků, hubnutí, metabolismus'
+    description: 'Fat Burner Thermo'
+    cena: '339.00'
+    DPH: DPH_3
+    Mena: Mena_1
+    popis: "<p><strong>SPALOVAČ TUKŮ FAT BURNER THERMO  PRO PODPORU REDUKCE A KONSTROLU TĚLESNÉ HMOTNOSTI</strong><strong><br /></strong>Snižuje vstřebávání tuků, zrychluje metabolismus, dodává energii, podporuje redukci tělesného tuku. <br /><br />Fat Burner Thermo je super silný spalovač tuků, který podporuje zrychlení klidového metabolismu neboli látkovou přeměnu. Pomalejší metabolismus zapříčiní to, že tělo nedokáže využít přijatou energii ve formě stravy a ukládá si ji do tukových zásob \"na horší časy\". <br />S pomalým metabolismem se můžete často cítit unaveni. S FAT BURNER THERMO nastartujete \"REDUKČNÍ proces\", podpoříte spalování tuků a získáte energii. <strong>Fat Burner Thermo obsahuje jen přírodní thermogenní \"spalovací\" látky, nezpůsobuje jo-jo efekt.<br /></strong><strong><br />Účinky<br /></strong>Zrychlení metabolismu tuků<br />Zpomalení tvorby tukové tkáně<br />Optimalizace metabolismu cukrů<br />Omezení pocitu hladu<br />Udržení  BMI (index tělesné hmotnosti)<br />Stimuluje odvádění zplodin aktivizovaného metabolismu z těla a detoxikaci organismu<br />Přispívá k tělesné a duševní pohodě<br />Dodává energii a vitalitu </p>\r\n<div><strong><strong>Složení:<br /></strong>Zelený čaj 10% EGCG 50% Polyphenoly</strong><br /><strong>Guarana 22 % kofeinu</strong><br /><strong>Pomerančovník hořký 6 % synefrinu</strong><br /><strong>Kyselina pantothenová</strong><br /><strong>Vrba bílá</strong> <br /> </div>\r\n<div><strong>Účinky aktivních látek<br /></strong><strong>Zelený čaj - výtažek </strong> <strong><br /></strong>Obsahuje polyfenoly a maximální obsah antioxidantu EGCG. EGCG zlepšuje prokrvení, pomáhá snižovat hmotnost tím, že omezuje vstřebávání tuků. Příznivě ovlivňuje hladinu LDL cholesterolu v krvi, stimuluje spalování tuků a energetický výdej organismu. Omezuje chuť na sladké pokrmy a pocit hladu, pozitivně působí při snižování a udržování tělesné hmotnosti, příznivě ovlivňuje index tělesné hmotnosti (BMI). Povzbuzuje inzulínovou funkci, optimalizuje hladinu cukru v krvi. Přispívá k dobrému psychickému i fyzickému stavu. <br /><br /><strong>Guarana</strong> (paulínie nápojová) dodává energii a vitalitu,<strong> </strong>působí proti psychické únavě a vyčerpání, aktivuje organismus, stimuluje udržování pozornosti. Podporuje<strong> </strong>metabolismus tuků, posiluje energetický metabolismus.<br /><br /><strong>Pomerančovník hořký (synefrin)</strong> pomáhá udržovat tukové tkáně v normálních mezích a kontrolovat tělesnou hmotnost.<strong> </strong>Posiluje trávení a štěpení tuků, stimuluje metabolismus cukrů. Přispívá k optimální relaxaci, k udržování psychické i fyzické pohody, navozuje zdravý spánek.<br /><br /><strong>Kyselina pantothenová</strong><strong> </strong>je nezbytná pro optimální využívání tuků v těle a pro uvolňování energie. Stimuluje metabolické reakce, pomáhá při udržování správné tělesné hmotnosti. Přispívá ke snížení únavy a vyčerpání, posiluje duševní výkonnost. Hraje roli v metabolismu vitamínu D, příznivě působí na zdraví kostí, zubů, vlasů, nehtů a kůže (zejm. při akné).  Ovlivňuje syntézu a metabolismus steroidních hormonů a přenašečů nervových vzruchů.<br /><br /><strong>Vrba bílá</strong> podporuje vylučování škodlivých produktů metabolismu z těla, tato funkce nabývá důležitosti zejména při posílení intenzity štěpení tuků z tukových tkání. Pomáhá omezovat výskyt virů v těle, má posilující a revitalizační účinky, podporuje pohyblivost a pružnost kloubů.<br /><hr /><strong>Doporučené dávkování: </strong>2 kapsle za den. Při dávkování 2x denně je nejvhodnější přípravek užívat ráno a odpoledne. Druhou kapsli berte nejpozději do 17 hod. <strong><em>Fat Burner Thermo</em></strong> obsahuje přírodní kofein. Vždy zapijte dostatečným množstvím tekutin. <br /><strong>Obsah:</strong> 60 tobolek<br /><br /><strong>Kombinace s dalšími doplňky stravy WHCS:<br /></strong>Fat Burner Thermo lze kombinovat s přípravky Acai Berry (detoxikace, antioxidant ) a Quick Dren (odvodnění, detoxikace)<br />Nelze užívat zároveň s doplňkem stravy, spalovačem tuků Hot Burn.<br /><br /><strong>Upozornění<br /></strong>Není vhodný pro děti,  a mladistvé do 18 let,  těhotné a kojící ženy. <br />Uchovávejte mimo dosah dětí, v suchém a chladném prostředí. Není náhradou pestré stravy. Nepřekračujte doporučené dávkování. Před použitím konzultujte s lékařem pokud užíváte volně prodejné léky a léky na recept nebo trpíte nějakým onemocněním. Přípravek obsahuje kofein, proto jej nekombinujte s jinými zdroji kofeinu nebo s látkami se známým stimulačním účinkem. Nekupujte v případě porušení obalu.<br /><br /><strong>Hmotnost obsahu </strong>37,6 g ± 5%<br />Notifikováno na Ministerstvu zdravotnictví ČR pod č.j.: OVZ-35.1-29.03.2010-54847 </div>"
+    skladem: '100.00'
+    min_mno: '1.00'
+    created_at: '2012-10-09 20:25:38'
+    updated_at: '2012-11-04 18:58:46'
+    slug: fat-burner-thermo
+PayPal:
+  PayPal_1:
+    requestUrl: 'https://ibs.rb.cz/RZBOP32/ControllerServlet'
+    shopname: 'WHCS CZ'
+    creditaccount: whcscz
+    creditbank: whcscz
+    Mena: Mena_1
+    ZemeUrceni: ZemeUrceni_1
+    enabled: true
+    img: /uploads//paypal.png
+    created_at: '2012-10-25 11:53:21'
+    updated_at: '2012-10-25 11:53:21'
+  PayPal_2:
+    requestUrl: 'https://ibs.rb.cz/RZBOP32/ControllerServlet'
+    shopname: 'WHCS CZ'
+    creditaccount: whcscz
+    creditbank: whcscz
+    Mena: Mena_2
+    ZemeUrceni: ZemeUrceni_2
+    enabled: true
+    img: /uploads//paypal.png
+    created_at: '2012-10-25 11:53:35'
+    updated_at: '2012-10-25 11:53:35'
+  PayPal_3:
+    requestUrl: 'https://ibs.rb.cz/RZBOP32/ControllerServlet'
+    shopname: 'WHCS CZ'
+    creditaccount: whcscz
+    creditbank: whcscz
+    Mena: Mena_2
+    ZemeUrceni: ZemeUrceni_3
+    enabled: true
+    img: /uploads//paypal.png
+    created_at: '2012-10-25 11:53:45'
+    updated_at: '2012-10-25 11:53:45'
+SlozeniZbozi:
+  SlozeniZbozi_5_1:
+    Zbozi: Zbozi_5
+    zbozi_id: '1'
+  SlozeniZbozi_5_2:
+    Zbozi: Zbozi_5
+    zbozi_id: '2'
+  SlozeniZbozi_5_3:
+    Zbozi: Zbozi_5
+    zbozi_id: '3'
+  SlozeniZbozi_5_4:
+    Zbozi: Zbozi_5
+    zbozi_id: '4'
+  SlozeniZbozi_5_5:
+    Zbozi: Zbozi_5
+    zbozi_id: '5'
+ePlatba:
+  ePlatba_1:
+    requestUrl: 'https://ibs.rb.cz/RZBOP32/ControllerServlet'
+    shopname: 'WHCS CZ'
+    creditaccount: whcs
+    creditbank: whcs
+    Mena: Mena_1
+    ZemeUrceni: ZemeUrceni_1
+    enabled: true
+    img: /uploads//platime_online.jpeg
+    created_at: '2012-10-25 11:30:45'
+    updated_at: '2012-10-25 11:30:45'
+  ePlatba_2:
+    requestUrl: 'https://ibs.rb.cz/RZBOP32/ControllerServlet'
+    shopname: 'WHCS SK'
+    creditaccount: whcs
+    creditbank: whcs
+    Mena: Mena_2
+    ZemeUrceni: ZemeUrceni_2
+    enabled: true
+    img: /uploads//platime_online.jpeg
+    created_at: '2012-10-25 11:31:02'
+    updated_at: '2012-10-25 11:31:02'
+PolozkyObj:
+  PolozkyObj_1:
+    Objednavky: Objednavky_12
+    stav: Skladem
+    Zbozi: Zbozi_2
+    mno: '1.00'
+    cena: '399.00'
+    sleva: null
+    Mena: Mena_1
+    created_at: '2012-10-18 21:25:24'
+    updated_at: '2012-10-23 13:51:39'
+    slug: 1-1
+  PolozkyObj_2:
+    Objednavky: Objednavky_12
+    stav: Přijato
+    Zbozi: Zbozi_3
+    mno: '1.00'
+    cena: '399.00'
+    sleva: null
+    created_at: '2012-10-18 21:25:24'
+    updated_at: '2012-10-18 21:25:24'
+    slug: '1'
+  PolozkyObj_3:
+    Objednavky: Objednavky_12
+    stav: Přijato
+    Zbozi: Zbozi_5
+    mno: '1.00'
+    cena: '100.00'
+    sleva: null
+    created_at: '2012-10-18 21:25:25'
+    updated_at: '2012-10-18 21:25:25'
+    slug: '2'
+  PolozkyObj_4:
+    Objednavky: Objednavky_12
+    stav: Přijato
+    Zbozi: Zbozi_1
+    mno: '1.00'
+    cena: '319.00'
+    sleva: null
+    created_at: '2012-10-18 21:25:25'
+    updated_at: '2012-10-18 21:25:25'
+    slug: '3'
+  PolozkyObj_5:
+    Objednavky: Objednavky_13
+    stav: Přijato
+    Zbozi: Zbozi_2
+    mno: '1.00'
+    cena: '399.00'
+    sleva: null
+    created_at: '2012-10-24 16:46:52'
+    updated_at: '2012-10-24 16:46:52'
+    slug: ''
+  PolozkyObj_6:
+    Objednavky: Objednavky_17
+    stav: Přijato
+    Zbozi: Zbozi_4
+    mno: '2.00'
+    cena: '329.00'
+    sleva: null
+    created_at: '2012-11-07 14:15:28'
+    updated_at: '2012-11-07 14:15:28'
+    slug: '4'
+Objednavky:
+  Objednavky_12:
+    typ: Přijato
+    stav: Nezaplaceno
+    Zakaznik: Zakaznik_1
+    Doprava: Doprava_3
+    Platba: Platba_5
+    PobockyDoprava: PobockyDoprava_2
+    sleva: '0.00'
+    celkem_dopl: '0.00'
+    celkem: '1217.00'
+    Mena: Mena_1
+    created_at: '2012-10-18 21:25:24'
+    updated_at: '2012-10-23 13:51:57'
+    slug: '11'
+  Objednavky_13:
+    typ: Přijato
+    stav: Nezaplaceno
+    Zakaznik: Zakaznik_1
+    Doprava: Doprava_1
+    Platba: Platba_1
+    sleva: '0.00'
+    celkem_dopl: '0.00'
+    celkem: '399.00'
+    Mena: Mena_1
+    created_at: '2012-10-24 16:46:52'
+    updated_at: '2012-10-24 16:46:52'
+    slug: '12'
+  Objednavky_14:
+    typ: Stornováno
+    stav: Nezaplaceno
+    Zakaznik: Zakaznik_1
+    Doprava: Doprava_1
+    Platba: Platba_1
+    sleva: '0.00'
+    celkem_dopl: '0.00'
+    celkem: null
+    Mena: Mena_1
+    created_at: '2012-10-24 16:47:27'
+    updated_at: '2012-10-24 17:52:07'
+    slug: '13'
+  Objednavky_15:
+    typ: Stornováno
+    stav: Nezaplaceno
+    Zakaznik: Zakaznik_1
+    Doprava: Doprava_3
+    Platba: Platba_5
+    PobockyDoprava: PobockyDoprava_3
+    sleva: '0.00'
+    celkem_dopl: '0.00'
+    celkem: null
+    Mena: Mena_1
+    created_at: '2012-10-25 14:13:14'
+    updated_at: '2012-10-25 14:15:10'
+    slug: '15'
+  Objednavky_16:
+    typ: Přijato
+    stav: Nezaplaceno
+    Zakaznik: Zakaznik_1
+    Doprava: Doprava_3
+    Platba: Platba_5
+    PobockyDoprava: PobockyDoprava_3
+    sleva: '0.00'
+    celkem_dopl: '0.00'
+    celkem: null
+    Mena: Mena_1
+    created_at: '2012-10-25 14:14:56'
+    updated_at: '2012-10-25 14:14:56'
+    slug: '14'
+  Objednavky_17:
+    typ: Přijato
+    stav: Nezaplaceno
+    Zakaznik: Zakaznik_2
+    Doprava: Doprava_3
+    Platba: Platba_6
+    PobockyDoprava: PobockyDoprava_2
+    sleva: '0.00'
+    celkem_dopl: '0.00'
+    celkem: '658.00'
+    Mena: Mena_1
+    created_at: '2012-11-07 14:15:28'
+    updated_at: '2012-11-07 14:15:28'
+    slug: ''
+ZemeUrceni:
+  ZemeUrceni_1:
+    name: 'Czech republik'
+    title: Cesko
+    created_at: '2012-08-07 15:35:49'
+    updated_at: '2012-08-07 15:35:49'
+    slug: czech-republik
+  ZemeUrceni_2:
+    name: Slovensko
+    title: Slovenkso
+    created_at: '2012-08-07 15:35:58'
+    updated_at: '2012-08-07 15:35:58'
+    slug: slovensko
+  ZemeUrceni_3:
+    name: Ostatni
+    title: Ostatni
+    created_at: '2012-08-07 15:36:05'
+    updated_at: '2012-08-07 15:36:05'
+    slug: ostatni
+Skupina:
+  Skupina_1:
+    name: Host
+    title: Host
+    popis: null
+    sleva: '0.00'
+    created_at: '2011-10-13 20:20:06'
+    updated_at: '2011-10-13 20:20:06'
+    slug: host
+  Skupina_2:
+    name: Zakaznik
+    title: Zákazník
+    popis: null
+    sleva: '5.00'
+    created_at: '2011-10-13 20:20:06'
+    updated_at: '2011-10-13 20:20:06'
+    slug: zakaznik
+  Skupina_3:
+    name: Velkoobchod
+    title: Velkoobchod
+    popis: ''
+    sleva: '15.00'
+    created_at: '2011-10-13 20:20:06'
+    updated_at: '2012-11-04 19:20:55'
+    slug: velkoobchod
+DPH:
+  DPH_1:
+    name: 'Zakladni sazba 20%'
+    title: 20%
+    sazba: '20'
+    created_at: '2012-08-12 11:04:50'
+    updated_at: '2012-08-12 11:07:36'
+    slug: zakladni-sazba-20
+  DPH_2:
+    name: 'Snizena sazba 14%'
+    title: 14%
+    sazba: '14'
+    created_at: '2012-08-12 11:05:02'
+    updated_at: '2012-08-12 11:07:46'
+    slug: snizena-sazba-14
+  DPH_3:
+    name: 'Mimo plneni 0%'
+    title: 0%
+    sazba: '0'
+    created_at: '2012-08-12 11:06:13'
+    updated_at: '2012-08-12 11:08:02'
+    slug: mimo-plneni-0
+Zakaznik:
+  Zakaznik_1:
+    username: honza74
+    email: damekjan@gmail.com
+    password: Katka65
+    Skupina: Skupina_3
+    Mena: Mena_1
+    jmeno: ''
+    prijmeni: ''
+    organizace: ''
+    ulice: ''
+    psc: ''
+    mesto: ''
+    ZemeUrceni: ZemeUrceni_1
+    ico: ''
+    jmeno_ico: ''
+    prijmeni_ico: ''
+    organizace_ico: ''
+    ulice_ico: ''
+    psc_ico: ''
+    mesto_ico: ''
+    created_at: '2012-08-07 12:26:56'
+    updated_at: '2012-10-17 22:24:48'
+    slug: honza74
+  Zakaznik_2:
+    username: WHCS
+    email: info@lekarnaproradost.cz
+    password: SHAM1957
+    Skupina: Skupina_2
+    Mena: Mena_1
+    jmeno: OLGA
+    prijmeni: ŠÍPKOVÁ
+    organizace: WHCS
+    ulice: 'HOLEČKOVA 99'
+    psc: '150 00'
+    mesto: Praha
+    ZemeUrceni: ZemeUrceni_1
+    ico: '28874196'
+    jmeno_ico: 'Olga '
+    prijmeni_ico: Šípková
+    organizace_ico: WHCS
+    ulice_ico: 'Holečkova 99'
+    psc_ico: '150 00'
+    mesto_ico: Praha
+    created_at: '2012-11-03 13:13:28'
+    updated_at: '2012-11-03 13:13:28'
+    slug: whcs
+Mena:
+  Mena_1:
+    name: 'Česká koruna'
+    oznaceni: Kč
+    kurz_url: ''
+    last_auto_update: null
+    created_at: '2011-10-13 20:20:06'
+    updated_at: '2012-08-10 16:27:25'
+    slug: ceska-koruna
+  Mena_2:
+    name: Euro
+    oznaceni: €
+    kurz_url: null
+    last_auto_update: null
+    created_at: '2011-10-13 20:20:06'
+    updated_at: '2011-10-13 21:04:55'
+    slug: euro
+MenaKurz:
+  MenaKurz_1:
+    Vychozi: Mena_2
+    Cilova: Mena_1
+    kurz: '24.500000000'
+  MenaKurz_2:
+    Vychozi: Mena_1
+    Cilova: Mena_2
+    kurz: '0.040816327'
+Doprava:
+  Doprava_1:
+    name: POsta
+    ZemeUrceni: ZemeUrceni_1
+    Mena: Mena_1
+    title: 'Postou dobirka'
+    celkem: '0.00'
+    cena: '79.00'
+    created_at: '2012-06-02 17:19:07'
+    updated_at: '2012-08-07 15:36:29'
+    slug: posta
+  Doprava_2:
+    name: 'POsta sk'
+    ZemeUrceni: ZemeUrceni_2
+    Mena: Mena_2
+    title: 'Slovenska posta'
+    celkem: '0.00'
+    cena: '4.10'
+    created_at: '2012-08-07 15:37:15'
+    updated_at: '2012-08-07 15:41:12'
+    slug: posta-1
+  Doprava_3:
+    name: Ulozenka
+    ZemeUrceni: ZemeUrceni_1
+    Mena: Mena_1
+    title: 'Ulozenka CR'
+    celkem: '0.00'
+    cena: '29.00'
+    created_at: '2012-08-07 15:37:37'
+    updated_at: '2012-08-07 15:37:37'
+    slug: ulozenka
+  Doprava_4:
+    name: 'Ulozenka SK'
+    ZemeUrceni: ZemeUrceni_2
+    Mena: Mena_2
+    title: 'Ulozenka SK'
+    celkem: '0.00'
+    cena: '1.20'
+    created_at: '2012-08-07 15:37:55'
+    updated_at: '2012-08-07 15:37:55'
+    slug: ulozenka-sk
+  Doprava_5:
+    name: 'Posta ostatni'
+    ZemeUrceni: ZemeUrceni_3
+    Mena: Mena_2
+    title: 'Doprava postou ostatni'
+    celkem: '0.00'
+    cena: '6.00'
+    created_at: '2012-10-24 17:18:28'
+    updated_at: '2012-10-24 17:18:28'
+    slug: posta-ostatni
+Akce:
+  Akce_1:
+    Kategorie: Kategorie_3
+    name: 'REGISTRACE = SLEVA 5%'
+    title: 'SLEVA PRO REGISTROVANÉ - TEST'
+    perex: "PRO REGISTROVANÉ MÁME PŘIPRAVENOU 5-ti PROCENTNÍ SLEVU NA PŘÍPRAVEK FAT BURNER THERMO\r\n....TEST"
+    perex_img: ''
+    enabled: true
+    platne_od: '2012-11-03 00:00:00'
+    platne_do: '2012-11-18 00:00:00'
+    pocet_kusy: null
+    keywords: 'FAT BURNER THERMO, SLEVA'
+    description: 'SLEVA 5% PRO REGISTROVANÉ'
+    cena: '322.00'
+    Mena: Mena_1
+    sleva: '17.00'
+    popis: 'SLEVA PRO REGISTROVANÉ VE VÝŠI 5%'
+    created_at: '2012-06-02 17:18:33'
+    updated_at: '2012-11-03 13:23:28'
+    slug: registrace-sleva-5
+Ceny:
+  Ceny_1:
+    Zbozi: Zbozi_4
+    Skupina: Skupina_3
+    typ: Sleva
+    dle: Skupina
+    cena: '329.00'
+    Mena: Mena_1
+    typ_slevy: Procenta
+    sleva: '10.00'
+    created_at: '2012-06-22 10:32:50'
+    updated_at: '2012-08-07 11:51:03'
+  Ceny_2:
+    Zbozi: Zbozi_5
+    Zakaznik: Zakaznik_1
+    typ: Cena
+    dle: Zakaznik
+    cena: '100.00'
+    Mena: Mena_1
+    typ_slevy: Cena
+    sleva: null
+    created_at: '2012-08-10 22:58:03'
+    updated_at: '2012-08-10 22:58:03'
+Slozeni:
+  Slozeni_1:
+    name: Test
+    title: Test
+    perex: 'Testovaci popis'
+    perex_img: 'obrazek v seznamu'
+    img: 'Obrazek v detailu'
+    popis: 'Celkovy popis'
+    enabled: true
+    keywords: whcs
+    description: whcs
+    created_at: '2012-08-07 13:10:24'
+    updated_at: '2012-08-07 13:10:24'
+    slug: test
+  Slozeni_2:
+    name: 'Pyr plazivy'
+    title: 'Pyr plazivy'
+    perex: 'podporuje vylučovací funkci močového traktu, stimuluje činnost ledvin, pomáhá zbavovat tělo přebytečné vody, přispívá k pročištění organismu. Podporuje činnost trávicího systému, posiluje činnost jater a žlučníku, příznivě působí při hubnutí. Přispívá k dobrému zdraví kloubů.'
+    perex_img: /uploads//il_foto.jpg
+    img: /uploads//il_foto.jpg
+    popis: 'podporuje vylučovací funkci močového traktu, stimuluje činnost ledvin, pomáhá zbavovat tělo přebytečné vody, přispívá k pročištění organismu. Podporuje činnost trávicího systému, posiluje činnost jater a žlučníku, příznivě působí při hubnutí. Přispívá k dobrému zdraví kloubů.'
+    enabled: true
+    keywords: 'Pyr plazivy'
+    description: 'Pyr plazivy'
+    created_at: '2012-08-07 13:54:34'
+    updated_at: '2012-08-11 13:45:24'
+    slug: pyr-plazivy
+  Slozeni_3:
+    name: 'Smetanka lékařská'
+    title: 'Smetanka lékařská'
+    perex: 'Smetanka lékařská'
+    perex_img: ''
+    img: ''
+    popis: 'působí povzbudivě na močový systém a diuretickou funkci, pomáhá detoxikovat organismus. Stimuluje vylučování žluče a trávicích šťáv, povzbuzuje peristaltiku střev. Chrání jaterní tkáň, blahodárně působí na jaterní činnost a funkci žlučníku. Pomáhá udržovat správnou kyselost v žaludku. Příznivě působí na kůži při akné. Obsahuje antioxidačně působící látky, chrání buňky před destruktivním působením kyslíkových radikálů. Přispívá k dobrému psychickému a fyzickému stavu.'
+    enabled: true
+    keywords: 'Smetanka lékařská'
+    description: 'Smetanka lékařská'
+    created_at: '2012-08-07 13:54:59'
+    updated_at: '2012-08-07 13:54:59'
+    slug: smetanka-lekarska
+  Slozeni_4:
+    name: 'Petržel zahradní'
+    title: 'Petržel zahradní'
+    perex: 'Petržel zahradní'
+    perex_img: ''
+    img: ''
+    popis: 'podporuje vylučovací funkci ledvin a aktivitu močového systému, přispívá k fyzické pohodě. Zklidňuje trávicí systém při podráždění. Obsahuje látky s antioxidačním ochranným účinkem.'
+    enabled: true
+    keywords: 'Petržel zahradní'
+    description: 'Petržel zahradní'
+    created_at: '2012-08-07 13:55:32'
+    updated_at: '2012-08-07 13:55:32'
+    slug: petrzel-zahradni
+  Slozeni_5:
+    name: Draslík
+    title: Draslík
+    perex: Draslík
+    perex_img: ''
+    img: ''
+    popis: 'hraje důležitou roli v udržování rovnováhy vody a minerálů v tkáních, je důležitý pro správné svalové a nervové funkce, harmonizuje srdeční činnost, pomáhá udržovat normální krevní tlak. Srdečního svalu, přispívá ke snížení únavy a vyčerpání. Podporuje udržování zdravých kostí a zubů, je důležitý pro biosyntézu bílkovin. Přispívá k udržování normálních psychických funkcí.'
+    enabled: true
+    keywords: Draslík
+    description: Draslík
+    created_at: '2012-08-07 13:55:55'
+    updated_at: '2012-08-07 13:55:55'
+    slug: draslik
+  Slozeni_6:
+    name: guarana
+    title: 'Guarana (kofein)'
+    perex: 'Vysoce efektivní látka na spalování tuků. Guarana podporuje odolnost vůči fyzické a psychické únavě, zlepšuje krevní oběh, podporuje snížení hladiny cholesterolu, podporuje proces regenerace organismu po namáhavém výkonu, oddaluje proces stárnutí a omezuje pocit hladu. Stimulující účinky guarany přetrvávají až šest hodin po požití a umožňují zvýšit fyzickou aktivitu, aniž by způsobily některý z vedlejších účinků pozorovaných při častém pití kávy (srdeční arytmie, nervozita, žaludeční a střevní problémy). Guarana obsahuje přírodní kofein. '
+    perex_img: ''
+    img: ''
+    popis: 'Vysoce efektivní látka na spalování tuků. Guarana podporuje odolnost vůči fyzické a psychické únavě, zlepšuje krevní oběh, podporuje snížení hladiny cholesterolu, podporuje proces regenerace organismu po namáhavém výkonu, oddaluje proces stárnutí a omezuje pocit hladu. Stimulující účinky guarany přetrvávají až šest hodin po požití a umožňují zvýšit fyzickou aktivitu, aniž by způsobily některý z vedlejších účinků pozorovaných při častém pití kávy (srdeční arytmie, nervozita, žaludeční a střevní problémy). Guarana obsahuje přírodní kofein. '
+    enabled: true
+    keywords: guarana
+    description: guarana
+    created_at: '2012-10-16 14:36:43'
+    updated_at: '2012-10-16 14:36:43'
+    slug: guarana
+  Slozeni_7:
+    name: 'Zelený čaj'
+    title: 'Zelený čaj'
+    perex: 'Zelený čaj'
+    perex_img: ''
+    img: ''
+    popis: 'Zelený čaj obsahuje katechin a theanin. Tato dvojice, podle některých studií, zrychluje metabolismus o 4 až 5%. Zelený čaj v kombinaci s kofeinem má silně stimulační, termogenní a antioxidační účinky. Zvyšuje spalování kalorií. Pomáhá měnit tuky na energii. Působí příznivě na zažívací ústrojí. Stimuluje nervový systém.'
+    enabled: true
+    keywords: 'Zelený čaj'
+    description: 'Zelený čaj'
+    created_at: '2012-10-16 14:37:41'
+    updated_at: '2012-10-16 14:37:41'
+    slug: zeleny-caj
+  Slozeni_8:
+    name: 'Pomerančovník hořký '
+    title: 'Pomerančovník hořký (Citrus Aurantium)'
+    perex: 'Pomerančovník hořký '
+    perex_img: ''
+    img: ''
+    popis: 'Zatím nejúčinnější spalovač. alkaloid obsažený v extraktu z citrusových plodů. Termogenní účinek, mírné potlačení „návalů“ hladu - přejídání. Synefrin je látka blízká zakázané látce efedrinu, ale na rozdíl od efedrinu nemá jeho nežádoucí účinky. Podporuje trojí mechanismus vedoucí k redukci tělesné hmotnosti - odbourávání lipidů (tuků), zvyšování energetického výdeje a eliminaci nadbytečné vody v organizmu. Do dnešní doby bylo provedeno několik výzkumů, které dokazují, že potravinové doplňky obsahující synerfin pomáhají spalovat tuk, stejně jako několik dalších studií dokazujících, že synefrin má vliv na zvýšenou termogenezi (kalorický výdej - při zvýšené termogenezi tělo produkuje víc tepla, na jehož vytvoření se využívají tukové zásoby, a to dokonce nezávisle na fyzické činnosti).'
+    enabled: true
+    keywords: 'Pomerančovník hořký '
+    description: 'Pomerančovník hořký '
+    created_at: '2012-10-16 14:43:38'
+    updated_at: '2012-10-16 14:43:38'
+    slug: pomerancovnik-horky
+  Slozeni_9:
+    name: 'Kyselina pantothenová'
+    title: 'Kyselina pantothenová (D-pantothenic Acid)'
+    perex: 'Kyselina pantothenová'
+    perex_img: ''
+    img: ''
+    popis: 'Vitamín, který se účastní metabolismu lipidů (jednoduchých tuků). Vitamín B5 zabraňuje usazování LDL cholesterolu (tzv. "špatného") v cévních stěnách. Používá se při zvýšené tělesné a duševní únavě. Antistresový vitamín.'
+    enabled: true
+    keywords: 'Kyselina pantothenová'
+    description: 'Kyselina pantothenová'
+    created_at: '2012-10-16 14:44:20'
+    updated_at: '2012-10-16 14:44:20'
+    slug: kyselina-pantothenova
+  Slozeni_10:
+    name: 'Výtažek z vrby bílé'
+    title: 'Výtažek z vrby bílé (salix alba)'
+    perex: 'Výtažek z vrby bílé'
+    perex_img: ''
+    img: ''
+    popis: 'Látka podobná aspirinu. Velmi důležitá součást přípravků na podporu hubnutí jelikož podporuje účinky stimulujících látek.  Pomáhá zrychlovat proces spalování tuků. '
+    enabled: true
+    keywords: 'Výtažek z vrby bílé'
+    description: 'Výtažek z vrby bílé'
+    created_at: '2012-10-16 14:45:00'
+    updated_at: '2012-10-16 14:45:00'
+    slug: vytazek-z-vrby-bile
+DopravaPobocka:
+  DopravaPobocka_4_1:
+    Doprava: Doprava_4
+    PobockyDoprava: PobockyDoprava_1
+  DopravaPobocka_3_2:
+    Doprava: Doprava_3
+    PobockyDoprava: PobockyDoprava_2
+  DopravaPobocka_3_3:
+    Doprava: Doprava_3
+    PobockyDoprava: PobockyDoprava_3
+  DopravaPobocka_3_4:
+    Doprava: Doprava_3
+    PobockyDoprava: PobockyDoprava_4

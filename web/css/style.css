@@ -1,0 +1,672 @@
+/*
+Theme Name: Name
+Theme URI: http://webovky.cz/
+Description: Vzhled pro
+Version: 1.0
+Author: Mcihal Kořínek
+Author URI: http://korinekmichal.cz/
+Tags: web, css, xhtml, javascript
+*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+body {
+  font-family: arial;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #212121;
+}
+
+label {
+  font-family: arial;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #212121;    
+}
+
+.slecna {
+  background: url(/pic/slecna.jpg) top right no-repeat;  
+}
+
+
+
+.cistic {
+  clear: both;
+}
+
+h1,h2 {
+  font-size: 30px;
+  color: #187a77;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0px 0px 30px 0px;
+}
+
+
+
+/*   tophead   */
+#tophead {
+  background: url(/pic/top.png) center top no-repeat;
+  width: 100%;
+  height: 78px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 10px 0px 0px 0px;
+}
+.wrap {
+  width: 990px;
+  margin: 0px auto;
+  text-align: right;
+}
+.prihlas {
+  background: url(/pic/decor_link.png) center right no-repeat;
+  padding: 5px 30px 5px 0px;
+  color: #fff;
+  height: 27px;
+}
+.prihlas:hover {
+  color: #e7f7b5;
+  background: url(/pic/decor_link_hover.png) center right no-repeat; 
+}
+/*   PAGE   */
+#page {
+  margin: 0px auto;
+  width: 990px;
+}
+
+#page em {
+  font-style: italic;
+}
+
+#page strong {
+  font-weight: bold;
+}
+
+
+/*   HEADER   */
+#header {
+  background: url(/pic/header.jpg) no-repeat;
+  width: 990px;
+  height: 250px;
+  padding: 88px 0px 0px 0px;
+  float: left;
+}
+
+#kosik {
+  float: right;
+  background: url(/pic/kosik.png) no-repeat;
+  width: 160px;
+  height: 27px;
+  margin: 120px 0px 0px 0px;
+  padding: 10px 8px 0px 60px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+}
+#kosik a {
+  float: right;
+  color: #fff;  
+}
+#kosik a:hover {
+  float: right;
+  color: #cee888;  
+}
+#kosik span {
+  color: #cee888;  
+}
+
+#menu {
+  float: right;
+  margin: 20px 0px 0px 0px;
+  padding: 0px;
+}
+
+#menu li {
+  float: left;
+  margin: 0px 20px 0px 0px;
+}
+
+#menu li a {
+  color: #4e637a;
+  text-decoration: none;
+  padding: 3px;
+  font-weight: bold;
+}
+
+#menu li a:hover {
+  color: #4e637a;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 4px solid #99b001; 
+}
+
+
+#sidemenu , #novinky {
+  margin: 0px 0px 20px 0px;
+  padding: 0px;
+}
+#novinky a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  color: #606060;
+    
+}
+#novinky p {
+  padding: 0px 0px 0px 15px;
+  color: #000; 
+    
+}
+.datum {
+  color: #1a7e7b!important;
+  background: url(/pic/sipka_gr.jpg) center left no-repeat;
+  padding: 0px 0px 0px 15px;  
+} 
+
+#sidemenu li , #novinky li {
+  margin: 0px 0px 10px 0px;  
+}
+
+#sidemenu li a {
+  color: #000;
+  text-decoration: underline;
+  background: url(/pic/sipka_sed.jpg) center left no-repeat;
+  padding: 0px 0px 0px 15px;
+}
+
+#sidemenu li a:hover {
+  color: #187a77;
+  font-weight: bold;
+  text-decoration: underline;
+  background: url(/pic/sipka_gr.jpg) center left no-repeat;
+  padding: 0px 0px 0px 15px; 
+}
+#sidemenu .nadpis , #novinky .nadpis {
+  color: #000;  /* a0a0a0 */
+  padding: 0px 0px 0px 15px;
+  margin: 0px 0px 0px 0px;
+  font-size: 30px;
+}
+
+#facebook {
+  padding: 8px 0px 0px 50px;
+  background: url(/pic/facebook.jpg) no-repeat;
+  line-height: 14px;
+  height: 32px;
+  margin: 0px 0px 0px 15px;
+}
+#facebook a {
+  color: #3c5a98;
+  font-weight: bold;
+}
+#facebook a:hover {
+  color: #203e7c;
+  font-weight: bold;
+}
+
+
+/*   CONTENT   */
+#content {
+  width: 990px;
+  min-height: 400px;
+  float: left;
+}
+
+#side {
+  float: left;
+  background: url(/pic/menu_bottom.jpg) center bottom no-repeat;
+  padding: 0px 0px 70px 0px;
+  width: 250px;
+}
+
+#obsah {
+  width: 700px;
+  padding: 0px 0px 0px 40px;
+  float: left;
+}
+#obsah p {
+  padding: 10px 0px 10px 0px;
+}
+
+#slider {
+  width: 650px;
+  height: 370px;
+  background: url(/pic/slider_stin.jpg) bottom center no-repeat;
+  margin: 0px 0px 20px 0px;  
+}
+.slider_ramecek{
+  background: url(/pic/slider_ramecek.png) no-repeat;
+  width: 650px;
+  height: 299px;
+}
+.slider_ukazatel {
+  width: 650px;
+  height: 20px;
+  text-align: right;
+  margin: 20px 0px 0px 0px;  
+}
+.ukazslid {
+  background: url(/pic/slider_ukazatel.png) no-repeat;
+  width: 14px;
+  height: 14px;
+  display: block;
+  float: right;
+  margin: 0px 10px 0px 0px;  
+}
+.ukazslid span {
+  display: none;;  
+}
+.ukazslid:hover {
+  background-position: 0px -14px;  
+}
+.active {
+  background-position: 0px -14px;  
+}
+
+
+
+.produkt {
+  width: 310px;
+  padding: 0px 40px 0px 0px;
+  height: 470px;
+  float: left;
+  margin: 0px 0px 50px 0px;  
+}
+.produkt p {
+  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  color: #606060;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.cena {
+  color: #021918;
+  font-size: 13px;
+}
+.posleve {
+  color: #207e7a;
+  font-size: 13px;
+}
+.meta strong {
+  font-size: 17px;
+}
+.meta {
+  text-align: right;
+}
+.skrtnuti {
+  text-decoration: line-through;
+}
+
+.koupit {
+  background: url(/pic/koupit.jpg) no-repeat;
+  width: 96px;
+  height: 30px;
+  display: block;
+  float: right;
+  margin: 5px 0px 0px 0px;
+}
+.detail {
+  background: url(/pic/detail.jpg) no-repeat;
+  width: 96px;
+  height: 30px;
+  display: block;
+  float: right;
+  margin: 5px 20px 0px 0px;
+}
+.koupit span , .detail span {
+  display: none;
+}
+.koupit:hover , .detail:hover {
+  background-position: 0px -30px;
+}
+
+
+
+.produkt_solo {
+
+}
+
+.oproduktu {
+  margin: 50px 0px 0px 0px;
+  text-align: justify;
+}
+
+.oproduktu p {
+  margin: 50px 0px 0px 0px;
+  text-align: justify;
+}
+.oproduktu strong {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.imgp_solo {
+  float: left;
+  width: 310px;
+  height: 200px;
+}
+
+.ilustracni_foto {
+  float: left;
+  margin: 0px 20px 0px 0px;
+}
+
+
+/*   FOOTER   */
+#footer {
+  background: url(/pic/footer.png) center bottom no-repeat;
+  width: 100%;
+  height: 300px;
+  float: left;
+}
+.wrapfoot {
+  width: 990px;
+  margin: 0px auto;
+  color: #fff;
+}
+
+.copy {
+  width: 990px;
+  float: left;
+  margin: 100px 0px 0px 0px;
+}
+.kontakt {
+  width: 990px;
+  float: left;
+  margin: 20px 0px 20px 0px;
+}
+.platba {
+  width: 990px;
+  float: left;
+}
+.platbadv {
+  margin: 0px 0px 0px 0px;
+  background: #fff;
+  padding: 5px 10px 5px 10px;
+  width: 320px;
+}
+
+
+.telefon {
+  width: 150px;
+  float: left;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 40px;
+  line-height: 16px;
+  background: url(/pic/telefon.png) center left no-repeat;
+  height: 30px;
+}
+.email {
+  width: 150px;
+  float: left;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 40px;
+  line-height: 16px;
+  background: url(/pic/email.png) center left no-repeat;
+  height: 30px;
+}
+.email a{
+    color: white;
+    text-decoration: none;
+}
+
+.footmenu {
+  width: 700px;
+  float: left;
+}
+.footmenu li {
+  float: left;
+  color: #fff;
+  margin: 0px 10px 0px 0px;
+}
+.footmenu li a {
+  color: #fff;
+}
+.footmenu li a:hover {
+  color: #e7f7b5;
+}
+
+h3 {
+  font-size: 18px;
+  color: #187a77;
+  /*float: left;*/
+  width: 300px;
+  clear: both;
+  margin: 30px 0px 0px 0px;
+}
+h3 span {
+  color: #fff;
+  font-weight: bold;
+  background: url(/pic/circle.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  display: block;
+  float: left;
+  text-align: center;
+  margin: 0px 15px 0px 0px;
+  font-size: 15px;
+}
+
+.registrace .coool {
+  width: 450px;
+  float: left; 
+}
+.prihlaseni label,
+.registrace label {
+    float: left;
+    width: 150px;
+    padding-top: 5px;
+}
+
+.prihlaseni .inp-text ,
+.registrace .inp-text {
+  background: url(/pic/inp.png) no-repeat;
+  width: 180px;
+  height: 35px;
+  float: left;
+  padding: 0px 20px 0px 20px;
+  margin: 0px 20px 20px 0px;
+  border: none;
+  color: #6f6f6f;  
+}
+.prihlaseni .inp-text-75 ,
+.registrace .inp-text-75 {
+  background: url(/pic/inp75.png) no-repeat;
+  width: 120px;
+  height: 35px;
+  float: left;
+  padding: 0px 20px 0px 20px;
+  margin: 0px 10px 20px 0px;
+  border: none;
+  color: #6f6f6f;  
+}
+.prihlaseni .inp-text-25 ,
+.registrace .inp-text-25 {
+  background: url(/pic/inp25.png) no-repeat;
+  width: 50px;
+  height: 35px;
+  float: left;
+  text-align: center;
+  margin: 0px 20px 0px 0px;
+  border: none;
+  color: #6f6f6f;  
+}
+.submit-prihlasit {
+  background: url(/pic/but_prihlasitse.png) no-repeat;
+  width: 96px;
+  height: 31px;
+  display: block;
+  border: none;
+}
+.submit-registrovat {
+  background: url(/pic/but_registrovatse.png) no-repeat;
+  width: 136px;
+  height: 31px;
+  display: block;
+  border: none;
+  float: left;
+}
+.submit-prihlasit:hover , 
+.submit-registrovat:hover {
+  background-position: 0px -31px;
+}
+.but-decor {
+  color: #47515c;
+  background: url(/pic/but_decor.png) no-repeat;
+  padding: 0px 0px 0px 26px;
+  height: 25px;
+  line-height: 25px;
+  display: block;
+  float: left;
+  margin: 0px 30px 0px 0px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.but-decor:hover {
+  color: #000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.obchodni-podminky-off {
+  background: url(/pic/obchodni_podminky.jpg) no-repeat;
+  width: 218px;
+  background-position: 0px -72px;
+  height: 72px;
+  float: left;
+  margin: 0px 20px 20px 0px;  
+}
+.obchodni-podminky-on {
+  background: url(/pic/obchodni_podminky.jpg) no-repeat;
+  width: 218px;
+  height: 72px;
+  float: left;
+  margin: 0px 20px 20px 0px;  
+}
+.obchodni-podminky-on span,
+.obchodni-podminky-off span {
+  display: none;
+}
+.inp-select {
+  background: url(/pic/inp_select.png) no-repeat;
+  width: 160px;
+  height: 35px;
+  float: left;
+  overflow: hidden; 
+  margin-bottom: 20px;
+}
+.inp-select:hover {
+  background-position: 0px -35px;
+}
+.inp-select select {
+  width: 145px;
+  height: 35px;
+  -webkit-appearance:none;
+  appearance:none;
+  border: none;
+  padding: 0px 0px 0px 15px;
+  background-color: transparent;
+  color: #6f6f6f; 
+}
+
+
+/*zakaznik*/
+.zakaznik
+{
+    
+}
+.zakaznik #zak_fak{
+    display: none;
+    float: left;
+    width: auto;
+    min-width: 500px;
+}
+.zakaznik #zak_obj{
+    display: inherit;
+    float: left;
+    width: auto;
+    min-width: 500px;
+}
+.zakaznik .zak_fak{
+    float: left;
+}
+.zakaznik .zak_obj{
+    float: left;
+}
+
+.prehled {
+    width: 100%;
+}
+.prehled th {
+    text-align: center;
+    font-weight: bold;
+}
+.prehled td {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.pay_img {
+    text-align: center;
+    padding-left: 20px;
+}
+
+.pay_link {
+    text-align: center;
+    padding-left: 20px;
+    float: left;
+    margin-top: 10px;
+}

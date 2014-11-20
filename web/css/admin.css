@@ -1,0 +1,31 @@
+/* 
+    Document   : admin
+    Created on : 13.3.2011, 12:38:30
+    Author     : jan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body {margin:5px; font:12px Verdana,Arial; padding: 5px 10px 5px 10px}
+ul.menu {list-style:none; margin:0; padding:0}
+ul.menu * {margin:0; padding:0}
+ul.menu a {display:block; color:#000; text-decoration:none;list-style: none}
+ul.menu li {position:relative; float:left; margin-right:2px;list-style: none}
+ul.menu ul {position:absolute; top:26px; left:-1px; background:#d1d1d1; display:none; opacity:0; list-style:none}
+ul.menu ul li {position:relative; border:1px solid #aaa; border-top:none; width:112px; margin-left: 0px;list-style: none;font-size: 11px;}
+ul.menu ul li a {display:block; padding:3px 7px 5px; background-color:#d1d1d1}
+ul.menu ul li a:hover {background-color:#c5c5c5}
+ul.menu ul ul {left:98px; top:-1px}
+ul.menu .menulink {border:1px solid #aaa; padding:5px 7px 7px; font-weight:bold; width:98px}
+ul.menu .topline {border-top:1px solid #aaa}
+
+/* oprava nastaveni administrace pro jroller */
+#sf_admin_container {
+    width: 100%;
+}
+button.fg-button-icon-left .ui-icon { left: 2px !IMPORTANT; }

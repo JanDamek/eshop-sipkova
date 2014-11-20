@@ -1,0 +1,242 @@
+Dodavatel:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [organizace]
+      canUpdate: true
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    mena_id: integer
+    jmeno: string(50)
+    prijmeni: string(50)
+    organizace: string(50)
+    ulice: string(50)
+    psc: string(6)
+    mesto: string(50)
+    ico: string(15)
+  relations:
+    Mena:
+      local: mena_id
+      onDelete: CASCADE
+      foreign: id
+
+DPH:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: true
+#    I18n:
+#      fields: [title, popis, keywords, description]
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    name: {type: string(50), notnull: true, unique: true}
+    title: {type: string(50), notnull: true}
+    sazba: integer
+
+Kategorie:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: true
+#    I18n:
+#      fields: [title, popis, keywords, description]
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    name: {type: string(50), notnull: true, unique: true}
+    title: {type: string(50), notnull: true}
+    parent_id: integer
+    popis: clob
+    poradi: integer
+    enabled: boolean
+    pozice: { type: enum, values: ["Levý sloupec","Horní pruh","Dolní pruh"] }
+    typ: { type: enum, values: ["Zboží","Stránky","Akce"] }
+    keywords: 
+      type: string(255)
+      notnull: true
+    description: 
+      type: string(255)
+      notnull: true
+  relations:
+    KategorieParent:
+      local: parent_id
+      foreign: id
+      class: Kategorie
+      
+Akce:      
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: true
+#    I18n:
+#      fields: [title, perex, popis, keywords, description]
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    kategorie_id: integer
+    name: {type: string(50), notnull: true, unique: true}
+    title: {type: string(50), notnull: true}
+    perex: clob
+    perex_img: string
+    enabled: boolean
+    zbozi_id: integer
+## platnost akce od, do, null je bez omezeni    
+    platne_od: timestamp
+    platne_do: timestamp
+## pocet kusu dane akce null mnozstvi je platne neomezene,0 vyprodane mnozstvi akce
+    pocet_kusy: integer   
+    gallery_id: integer
+    keywords: 
+      type: string(255)
+      notnull: true
+    description: 
+      type: string(255)
+      notnull: true
+    cena: float
+    mena_id: integer
+    sleva: float
+    popis: clob
+  relations:
+    Kategorie:
+      local: kategorie_id
+      foreign: id
+    Gallery:
+      local: gallery_id
+      foreign: id
+    Zbozi:
+      local: zbozi_id
+      foreign: zbozi_id
+    Mena:
+      local: mena_id
+      foreign: id
+      
+Zbozi:      
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: true
+#    I18n:
+#      fields: [title, perex, popis, keywords, description]
+  columns:
+    zbozi_id: {type: integer, primary: true, autoincrement: true}
+    name: {type: string(50), notnull: true, unique: true}
+    title: {type: string(50), notnull: true}
+    perex: clob
+    perex_img: string
+    nazev_img: string
+    baleni: string(40)
+    enabled: boolean
+    gallery_id: integer
+    keywords: 
+      type: string(255)
+      notnull: true
+    description: 
+      type: string(255)
+      notnull: true
+    cena: float
+    dph_id: integer
+    mena_id: integer
+    popis: clob
+    skladem: float
+    min_mno: { type: float, default: 1 }
+    dodavatel_id: integer
+  relations:
+    Kategorie:
+      class: Kategorie
+      local: zbozi_id
+      foreign: kategorie_id
+      refClass: KategorieZbozi
+    Gallery:
+      local: gallery_id
+      foreign: id
+    Mena:
+      local: mena_id
+      foreign: id
+    Slozeni:
+      class: Slozeni
+      local: slozeni_id
+      foreign: zbozi_id
+      refClass: SlozeniZbozi
+    DPH:
+      local: dph_id
+      foreign: id
+    Dodavatel:
+      local: dodavatel_id
+      foreign: id
+      
+Slozeni:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: true
+  columns:
+    slozeni_id: {type: integer, primary: true, autoincrement: true}
+    name: {type: string(50), notnull: true, unique: true}
+    title: {type: string(50), notnull: true}
+    perex: clob
+    perex_img: string
+    img: string
+    popis: clob
+    enabled: boolean
+    keywords: 
+      type: string(255)
+      notnull: true
+    description: 
+      type: string(255)
+      notnull: true
+      
+SlozeniZbozi:
+  columns:
+    slozeni_id:
+      type: integer
+      primary: true
+    zbozi_id:
+      type: integer
+      primary: true  
+      
+KategorieZbozi:
+  columns:
+    kategorie_id:
+      type: integer
+      primary: true
+    zbozi_id:
+      type: integer
+      primary: true  
+    
+Ceny:      
+  actAs:
+    Timestampable:
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    zbozi_id: {type: integer, notnull: true }
+    skupina_id: integer
+    zakaznik_id: integer
+    typ: {type: enum, values: ["Cena", "Sleva"] }
+    dle: {type: enum, values: ["Skupina", "Zakaznik"] }
+    cena: float
+    mena_id: integer
+    typ_slevy: {type: enum, values: ["Cena", "Procenta"] }
+    sleva: float
+  relations:
+    Zbozi:
+      local: zbozi_id
+      foreign: zbozi_id
+    Skupina:
+      local: skupina_id
+      foreign: id
+    Zakaznik:
+      local: zakaznik_id
+      foreign: id
+    Mena:
+      local: mena_id
+      foreign: id
+  

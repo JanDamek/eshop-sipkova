@@ -1,0 +1,191 @@
+Setting:
+  actAs: [Timestampable]
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    SiteName: string(50)
+    email: string(50)
+    email2: string(50)
+    tel: string(50)
+    mobil: string(50)
+    pracovni_doba: clob
+    ulice: string(100)
+    mesto: string(100)
+    ga_code: string(100)
+    google_overeni: string(255)
+    hlavni_mena: integer
+    vychozi_skupina_id: { type: integer, notnull: true }
+    skupina_host_id: { type: integer, notnull: true }
+    skupina_vel_id: { type: integer, notnull: true }
+    interval_typ:
+      type: enum
+      values: ["Hodina","Den","Mesic","Rok"]
+      default: Den
+    interval_kontroly_meny: 
+      type: integer    
+      default: 1
+    facebook_id: string(50)
+    facebook_url: string(50)
+  relations:
+    Mena:
+      local: hlavni_mena
+      foreign: id  
+    SkupinaVychozi:
+      class: Skupina
+      local: vychozi_skupina_id
+      foreign: id
+    SkupinaHost:
+      class: Skupina
+      local: skupina_host_id
+      foreign: id
+    SkupinaVel:
+      class: Skupina
+      local: skupina_vel_id
+      foreign: id
+      
+WebPay:
+  actAs: [Timestampable]
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    requestUrl: { type: string(250), default: 'https://3dsecure.exemple.com/order.do' }
+    merchantNumber: string(50)
+    publicKey: string(255)
+    privateKey: string(255)
+    heslo: string(7)
+    lastOrderNum: {type: integer, default: 1}
+    mena_id: { type: integer, notnull: true }
+    zeme_urceni_id: { type: integer, notnull: true }
+    enabled: { type: boolean, default: false }
+    img: string
+  relations:
+    Mena:
+      local: mena_id
+      foreign: id
+    ZemeUrceni:
+      local: zeme_urceni_id
+      foreign: id
+      
+ePlatba:
+  actAs: [Timestampable]
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    requestUrl: { type: string(250), default: 'https://ibs.rb.cz/RZBOP32/ControllerServlet' }
+    shopname: string(50)
+    creditaccount: string(50)
+    creditbank: string(50)
+    mena_id: { type: integer, notnull: true }
+    zeme_urceni_id: { type: integer, notnull: true }
+    enabled: { type: boolean, default: false }
+    img: string
+  relations:
+    Mena:
+      local: mena_id
+      foreign: id
+    ZemeUrceni:
+      local: zeme_urceni_id
+      foreign: id
+
+PayPal:
+  actAs: [Timestampable]
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    requestUrl: { type: string(250), default: 'https://ibs.rb.cz/RZBOP32/ControllerServlet' }
+    shopname: string(50)
+    creditaccount: string(50)
+    creditbank: string(50)
+    mena_id: { type: integer, notnull: true }
+    zeme_urceni_id: { type: integer, notnull: true }
+    enabled: { type: boolean, default: false }
+    img: string    
+  relations:
+    Mena:
+      local: mena_id
+      foreign: id
+    ZemeUrceni:
+      local: zeme_urceni_id
+      foreign: id
+
+Stranky:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: true
+#    I18n:
+#      fields: [title, popis, keywords, description]
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    kategorie_id: integer
+    name: {type: string(50), notnull: true, unique: true}
+    title: {type: string(50), notnull: true}
+    gallery_id: integer
+    perex: clob
+    popis: clob
+    enabled: boolean
+    is_homepage: boolean
+    keywords: 
+      type: string(255)
+      notnull: true
+    description: 
+      type: string(255)
+      notnull: true
+  relations:
+    Kategorie:
+      local: kategorie_id
+      foreign: id
+    Gallery:
+      local: gallery_id
+      foreign: id
+    
+Mena:    
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [oznaceni]
+      canUpdate: true
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    name: string(50)
+    oznaceni: {type: string(10), notnull: true, unique: true}
+#    zaokrouhleni_id: integer
+    kurz_url: string
+    last_auto_update: timestamp
+  relations:
+#    Zaokrouhleni:
+#      local: zaokrouhleni_id
+#      foreign: id
+    MenaKurz:
+      local: id
+      foreign: vychozi_mena
+
+#Zaokrouhleni:
+#  columns:
+#    id: {type: integer, primary: true, autoincrement: true}
+#    name: string(50)
+#    metoda: 
+#      type: enum
+#      values: ["1","0.01","0.05","0.1","0.5"]
+
+MenaKurz:
+  columns:
+    vychozi_mena: integer
+    cilova_mena: integer
+    kurz: 
+      type: decimal(18)
+      scale: 9      
+#    zaokrouhleni_id: integer
+  relations:
+    Vychozi:
+      class: Mena
+      local: vychozi_mena
+      foreign: id
+      foreignAlias: KurzVychoziMena        
+    Cilova:
+      class: Mena
+      local: cilova_mena
+      foreign: id
+      foreignAlias: KurzCilovaMena        
+#    Zaokrouhleni:
+#      local: zaokrouhleni_id
+#      foreign: id    

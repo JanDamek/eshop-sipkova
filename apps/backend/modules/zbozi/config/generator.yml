@@ -1,0 +1,43 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           zbozi
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          zbozi
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        zbozi_id:
+        name: 
+        title:
+        perex:
+        perex_img:
+        nazev_img:
+          label: "Obrazek nazvu"
+          help: "Obrazek nahrazuje zobrazeni nazvu produktu"
+        baleni: 
+        enabled:
+        gallery_id:
+        keywords: 
+        description: 
+        cena:
+        dph_id: 
+        mena_id:
+        popis: 
+        skladem:
+        min_mno:
+        dodavatel_id: 
+      list:    
+        display: [ =name, enabled, cena, Mena, DPH, baleni]
+        title: Seznam zboží
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

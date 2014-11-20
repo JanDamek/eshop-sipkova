@@ -1,0 +1,350 @@
+ZemeUrceni:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: false
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    name: {type: string(50), notnull: true }
+    title: string(50) 
+
+Doprava:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: false
+  columns:
+    doprava_id: {type: integer, primary: true, autoincrement: true}
+    name: {type: string(50), notnull: true }
+    zeme_urceni_id: { type: integer, notnull: true }
+    mena_id: { type: integer, notnull: true }
+    title: string(50)
+    celkem: float
+    cena: float
+  relations:     
+    ZemeUrceni:
+      local: zeme_urceni_id
+      foreign: id
+    Mena:
+      local: mena_id
+      foreign: id
+      type: one
+    PobockyDoprava:
+      class: PobockyDoprava
+      local: doprava_id
+      foreign: pobocka_id 
+      refClass: DopravaPobocka
+      
+DopravaPobocka:
+  columns:
+    doprava_id:
+      type: integer
+      primary: true
+    pobocka_id:
+      type: integer
+      primary: true       
+      
+PobockyDoprava:      
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: false
+  columns:
+    pobocka_id: {type: integer, primary: true, autoincrement: true}
+    name: {type: string(50), notnull: true }
+    mena_id: { type: integer, notnull: true }
+    title: string(50)
+    celkem: float
+    cena: float
+    adresa: clob
+    provozni_doba: clob
+    mapa_adresa: string(255)
+  relations:     
+    Mena:
+      local: mena_id
+      foreign: id
+      type: one
+      
+Platba:    
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [name]
+      canUpdate: false
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    name: {type: string(50), notnull: true }
+    title: string(50)
+    mena_id: { type: integer, notnull: true }
+    doprava_id: { type: integer, notnull: true }
+    celkem: float
+    cena: float
+    system_platby: {type: enum, values: ["OffLine", "OnLine"]}
+  relations:
+    Doprava:       
+      local: doprava_id       
+      foreign: doprava_id   
+    Mena:
+      local: mena_id
+      foreign: id
+      type: one
+
+#CisloObj:
+#  actAs:
+#    Timestampable:
+#  columns:
+#    id: {type: integer, primary: true, autoincrement: true}
+#    title: string(32)
+#
+#FakturaObj:
+#  inheritance:
+#    extends: CisloObj
+#    type: Concrete
+
+#StavObjednavky:
+#  actAs:
+#    Timestampable:
+#    Sluggable:
+#      unique: true
+#      fields: [name]
+#      canUpdate: false
+##    I18n:
+##      fields: [title, popis]
+#  columns:
+#    id: {type: integer, primary: true, autoincrement: true}
+#    name: {type: string(50), notnull: true, unique: true}
+#    title: {type: string(50), notnull: true}
+#    popis: clob
+
+#Faktura:
+#  actAs:
+#    Timestampable:
+#    Sluggable:
+#      unique: true
+#      fields: [id]
+#      canUpdate: false
+#  columns:
+#    id: { type: integer, primary: true, autoincrement: true }
+#    faktura_obj_id: { type: integer, notnull: true, unique: true }
+#    stav: { type: enum, values: ["Vystaveno", "Splatno", "Proplaceno", "Stornováno"] }
+#    sleva: float
+#    celkem_dopl: float
+#    celkem: float
+#    mena_id: integer
+#    zakaznik_id: { type: integer, notnull: true }
+#    objednavka_id: integer
+#    doprava_id: integer
+#    platba_id: integer
+#    pobocka_id: integer   
+#    splatnost: date
+#  relations:
+#    FakturaObj:
+#      local: faktura_obj_id
+#      foreign: id
+#      type: one
+#    Mena:
+#      local: mena_id
+#      foreign: id
+#      type: one
+#    Zakaznik:
+#      local: zakaznik_id
+#      foreign: id
+#      type: one
+#    Objednavka:
+#      local: objednavka_id
+#      foreign: id
+#      type: one
+#    Doprava:
+#      local: doprava_id
+#      foreign: doprava_id
+#      type: one
+#    Platba:
+#      local: platba_id
+#      foreign: id
+#      type: one
+#    PobockyDoprava:
+#      local: pobocka_id
+#      foreign: pobocka_id
+#      type: one
+#    Polozky:
+#      class: PolozkyFak
+#      local: id
+#      foreign: faktura_id
+#      type: many
+#
+#PolozkyFak:
+#  actAs:
+#    Timestampable:
+#    Sluggable:
+#      unique: true
+#      fields: [id]
+#      canUpdate: false
+#  columns:
+#    id: {type: integer, primary: true, autoincrement: true}
+#    faktura_id: {type: integer, notnull: true}
+#    zbozi_id: integer
+#    mno: float
+#    cena: float
+#    sleva: float
+#    mena_id: integer
+#  relations:
+#    Faktura:
+#      local: faktura_id
+#      foreign: id
+#      type: one
+#    Zbozi:
+#      local: zbozi_id
+#      foreign: zbozi_id
+#      type: one
+#    Mena:
+#      local: mena_id
+#      foreign: id      
+#      type: one      
+
+Objednavky:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [id]
+      canUpdate: false
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+#    cislo_obj_id: {type: integer, notnull: true, unique: true}
+    typ: { type: enum, values: ["Přijato", "Odeslano", "Doruceno", "Stornováno" ], default: "Přijato" }
+    stav: { type: enum, values: ["Nezaplaceno", "Zaplaceno"], default: "Nezaplaceno" }
+#    stav_id: {type: integer, notnull: true}
+    zakaznik_id: {type: integer, notnull: true}
+#    faktura_id: integer
+    doprava_id: { type: integer, notnull: true }
+    platba_id: { type: integer, notnull: true }
+    pobocka_id: integer
+    sleva: float
+    celkem_dopl: float
+    celkem: float
+    mena_id: { type: integer, notnull: true }
+  relations:
+#    CisloObj:
+#      local: cislo_obj_id
+#      foreign: id
+#      type: one
+    Zakaznik:
+      local: zakaznik_id
+      foreign: id
+      type: one
+#    Faktura:
+#      local: faktura_id
+#      foreign: id
+#      type: one
+    Doprava:
+      local: doprava_id
+      foreign: doprava_id
+      type: one
+    Platba:
+      local: platba_id
+      foreign: id
+      type: one
+    PobockyDoprava:
+      local: pobocka_id
+      foreign: pobocka_id
+      type: one
+    Mena:
+      local: mena_id
+      foreign: id
+      type: one
+    Polozky:
+      class: PolozkyObj
+      local: id
+      foreign: obj_id
+      type: many
+  
+PolozkyObj:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [id]
+      canUpdate: false
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    obj_id: {type: integer, notnull: true}
+    stav: {type: enum, values: ["Skladem", "Objednat", "Stornováno", "Vyskladneno"] }    
+    zbozi_id: { type: integer, notnull: true }
+    mno: float
+    cena: float
+    sleva: float
+    mena_id: integer
+  relations:
+    Objednavky:
+      local: obj_id
+      foreign: id
+      type: one
+    Zbozi:
+      local: zbozi_id
+      foreign: zbozi_id
+      type: one
+    Mena:
+      local: mena_id
+      foreign: id
+      type: one
+      
+Platby:
+  actAs:
+    Timestampable:
+    Sluggable:
+      unique: true
+      fields: [id]
+      canUpdate: false
+  columns:
+    id: {type: integer, primary: true, autoincrement: true}
+    stav: { type: enum, values: ["V procesu", "Zamitnuto", "Zaplaceno"], default: "V procesu" }
+    zakaznik_id: {type: integer, notnull: true}
+    doprava_id: { type: integer, notnull: true }
+    platba_id: { type: integer, notnull: true }
+    pobocka_id: integer
+    celkem: float
+    mena_id: { type: integer, notnull: true }
+    obj_id: { type: integer, notnull: true }
+    hash: { type: string(32), notnull: true }
+  indexes:
+    hash:
+      fields:
+        hash:
+          sorting: ASC
+          length: 32
+      type: unique    
+  relations:
+    Objednavky:
+      local: obj_id
+      foreign: id
+      type: one
+    Mena:
+      local: mena_id
+      foreign: id
+      type: one
+    Zakaznik:
+      local: zakaznik_id
+      foreign: id
+      type: one
+    Doprava:
+      local: doprava_id
+      foreign: doprava_id
+      type: one
+    Platba:
+      local: platba_id
+      foreign: id
+      type: one
+    PobockyDoprava:
+      local: pobocka_id
+      foreign: pobocka_id
+      type: one
+      
+    
+  

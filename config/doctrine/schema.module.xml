@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<orm-designer version="1.4.7.499">
+
+  <module import-format="DoctrineYml" import-path="schema_zbozi.yml" name="sipkova-eshop" visBkColor="15989236" visSizeX="0" visSizeX2="1528" visSizeY="0" visSizeY2="1368">
+    <table name="Setting" visPositionX="20" visPositionY="40" visSizeX="0" visSizeX2="151" visSizeY="0" visSizeY2="297">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="SiteName" size="50" type="string"/>
+      <column name="email" size="50" type="string"/>
+      <column name="email2" size="50" type="string"/>
+      <column name="tel" size="50" type="string"/>
+      <column name="mobil" size="50" type="string"/>
+      <column name="pracovni_doba" type="clob"/>
+      <column name="ulice" size="100" type="string"/>
+      <column name="mesto" size="100" type="string"/>
+      <column name="ga_code" size="100" type="string"/>
+      <column name="google_overeni" size="255" type="string"/>
+      <column name="hlavni_mena" required="true" type="integer"/>
+      <column name="vychozi_skupina_id" required="true" type="integer"/>
+      <column name="skupina_host_id" required="true" type="integer"/>
+      <column name="skupina_vel_id" required="true" type="integer"/>
+      <column default="Den" name="interval_typ" type="enum" values="Minuta,Hodina,Den,Mesic,Rok"/>
+      <column default="1" name="interval_kontroly_meny" type="integer"/>
+      <column default="true" name="uprednostnit_akce" type="boolean"/>
+      <column default="Y-%6d" name="format_cisla_obj" size="32" type="string"/>
+      <column default="Y-%6d" name="format_cisla_fak" size="32" type="string"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="WebPay" visPositionX="218" visPositionY="40" visSizeX="0" visSizeX2="137" visSizeY="0" visSizeY2="157">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column default="https://3dsecure.exemple.com/order.do" name="requestUrl" required="true" size="250" type="string"/>
+      <column name="merchantNumber" required="true" size="50" type="string"/>
+      <column name="publicKey" size="255" type="string"/>
+      <column name="privateKey" size="255" type="string"/>
+      <column name="heslo" required="true" size="70" type="string"/>
+      <column default="1" name="lastOrderNum" type="integer"/>
+      <column name="mena_id" required="true" type="integer"/>
+      <column name="zeme_urceni_id" required="true" type="integer"/>
+      <column default="false" name="enabled" type="boolean"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="ePlatba" visPositionX="416" visPositionY="40" visSizeX="0" visSizeX2="122" visSizeY="0" visSizeY2="129">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column default="https://ibs.rb.cz/RZBOP32/ControllerServlet" name="requestUrl" required="true" size="250" type="string"/>
+      <column name="shopname" required="true" size="50" type="string"/>
+      <column name="creditaccount" required="true" size="50" type="string"/>
+      <column name="creditbank" required="true" size="50" type="string"/>
+      <column name="mena_id" required="true" type="integer"/>
+      <column name="zeme_urceni_id" required="true" type="integer"/>
+      <column default="false" name="enabled" required="true" type="boolean"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Stranky" visPositionX="610" visPositionY="40" visSizeX="0" visSizeX2="117" visSizeY="0" visSizeY2="171">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="kategorie_id" type="integer"/>
+      <column name="name" required="true" size="50" type="string" unique="true"/>
+      <column name="title" required="true" size="50" type="string"/>
+      <column name="gallery_id" type="integer"/>
+      <column name="perex" type="clob"/>
+      <column name="popis" type="clob"/>
+      <column name="enabled" type="boolean"/>
+      <column name="is_homepage" type="boolean"/>
+      <column name="keywords" required="true" size="255" type="string"/>
+      <column name="description" required="true" size="255" type="string"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[name]</attribute>
+            <attribute name="canUpdate">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Mena" visPositionX="789" visPositionY="40" visSizeX="0" visSizeX2="140" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="name" required="true" size="50" type="string"/>
+      <column name="oznaceni" required="true" size="10" type="string" unique="true"/>
+      <column name="zaokrouhleni_id" type="integer"/>
+      <column name="kurz_url" type="string"/>
+      <column name="last_auto_update" type="timestamp"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[oznaceni]</attribute>
+            <attribute name="canUpdate">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Zaokrouhleni" visPositionX="1004" visPositionY="40" visSizeX="0" visSizeX2="92" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="name" size="50" type="string"/>
+      <column name="metoda" type="enum" values="1,0.01,0.05,0.1,0.5"/>
+    </table>
+    <table name="MenaKurz" visPositionX="1182" visPositionY="40" visSizeX="0" visSizeX2="119" visSizeY="0" visSizeY2="87">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="vychozi_mena" type="integer"/>
+      <column name="cilova_mena" type="integer"/>
+      <column name="kurz" size="18" type="decimal">
+        <orm-properties>
+          <attribute name="scale">9</attribute>
+        </orm-properties>
+      </column>
+      <column name="zaokrouhleni_id" type="integer"/>
+    </table>
+    <table name="Gallery" visPositionX="1374" visPositionY="40" visSizeX="0" visSizeX2="117" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="title" required="true" size="100" type="string"/>
+      <column name="description" required="true" size="255" type="string"/>
+      <column name="keywords" required="true" size="255" type="string"/>
+      <column name="path" required="true" size="255" type="string"/>
+      <column default="true" name="is_active" required="true" type="boolean"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">false</attribute>
+            <attribute name="fields">[title]</attribute>
+            <attribute name="canUpdate">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="GalleryImage" visPositionX="45" visPositionY="377" visSizeX="0" visSizeX2="100" visSizeY="0" visSizeY2="115">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="gallery_id" required="true" type="integer"/>
+      <column default="true" name="is_active" required="true" type="boolean"/>
+      <column name="path" required="true" size="255" type="string"/>
+      <column name="alt" required="true" size="60" type="string"/>
+      <column name="title" size="100" type="string"/>
+      <column name="ord" type="integer"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="ZemeUrceni" visPositionX="240" visPositionY="377" visSizeX="0" visSizeX2="92" visSizeY="0" visSizeY2="59">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="name" required="true" size="50" type="string"/>
+      <column name="title" size="50" type="string"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[name]</attribute>
+            <attribute name="canUpdate">false</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Doprava" visPositionX="417" visPositionY="377" visSizeX="0" visSizeX2="120" visSizeY="0" visSizeY2="171">
+      <column auto-increment="true" name="doprava_id" primary="true" type="integer"/>
+      <column name="name" required="true" size="50" type="string"/>
+      <column name="zeme_urceni_id" type="integer"/>
+      <column name="mena_id" type="integer"/>
+      <column name="title" size="50" type="string"/>
+      <column name="celkem0" type="float"/>
+      <column name="cena0" type="float"/>
+      <column name="celkem1" type="float"/>
+      <column name="cena1" type="float"/>
+      <column name="celkem2" type="float"/>
+      <column name="cena2" type="float"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[name]</attribute>
+            <attribute name="canUpdate">false</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="DopravaPobocka" visPositionX="595" visPositionY="377" visSizeX="0" visSizeX2="147" visSizeY="0" visSizeY2="60">
+      <column name="doprava_id" primary="true" type="integer"/>
+      <column name="pobocka_id" primary="true" type="integer"/>
+    </table>
+    <table name="PobockyDoprava" visPositionX="796" visPositionY="377" visSizeX="0" visSizeX2="127" visSizeY="0" visSizeY2="199">
+      <column auto-increment="true" name="pobocka_id" primary="true" type="integer"/>
+      <column name="name" required="true" size="50" type="string"/>
+      <column name="mena_id" type="integer"/>
+      <column name="title" size="50" type="string"/>
+      <column name="celkem0" type="float"/>
+      <column name="cena0" type="float"/>
+      <column name="celkem1" type="float"/>
+      <column name="cena1" type="float"/>
+      <column name="celkem2" type="float"/>
+      <column name="cena2" type="float"/>
+      <column name="adresa" type="clob"/>
+      <column name="provozni_doba" type="clob"/>
+      <column name="mapa_adresa" size="255" type="string"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[name]</attribute>
+            <attribute name="canUpdate">false</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Platba" visPositionX="993" visPositionY="377" visSizeX="0" visSizeX2="114" visSizeY="0" visSizeY2="185">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="name" required="true" size="50" type="string"/>
+      <column name="title" size="50" type="string"/>
+      <column name="mena_id" required="true" type="integer"/>
+      <column name="doprava_id" required="true" type="integer"/>
+      <column name="celkem0" type="float"/>
+      <column name="cena0" type="float"/>
+      <column name="celkem1" type="float"/>
+      <column name="cena1" type="float"/>
+      <column name="celkem2" type="float"/>
+      <column name="cena2" type="float"/>
+      <column default="OffLine" name="system_platby" required="true" type="enum" values="OffLine,OnLine"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[name]</attribute>
+            <attribute name="canUpdate">false</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="CisloObj" visPositionX="1199" visPositionY="377" visSizeX="0" visSizeX2="85" visSizeY="0" visSizeY2="45">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="title" size="32" type="string"/>
+      <inheritance-parent type="Concrete"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="FakturaObj" visPositionX="1404" visPositionY="377" visSizeX="0" visSizeX2="56" visSizeY="0" visSizeY2="31">
+      <column name="id"/>
+      <inheritance-child derived-from="CisloObj"/>
+    </table>
+    <table name="Faktura" visPositionX="43" visPositionY="714" visSizeX="0" visSizeX2="104" visSizeY="0" visSizeY2="199">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="faktura_obj_id" required="true" unique="true"/>
+      <column name="stav" type="enum" values="Vystaveno,Splatno,Proplaceno,Stornováno"/>
+      <column name="sleva" type="float"/>
+      <column name="celkem_dopl" type="float"/>
+      <column name="celkem" type="float"/>
+      <column name="mena_id" type="integer"/>
+      <column name="zakaznik_id" required="true" type="integer"/>
+      <column name="objednavka_id"/>
+      <column name="doprava_id" type="integer"/>
+      <column name="platba_id" type="integer"/>
+      <column name="pobocka_id" type="integer"/>
+      <column name="splatnost" type="date"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[id]</attribute>
+            <attribute name="canUpdate">false</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="PolozkyFak" visPositionX="236" visPositionY="714" visSizeX="0" visSizeX2="100" visSizeY="0" visSizeY2="115">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="faktura_id" required="true" type="integer"/>
+      <column name="zbozi_id" type="integer"/>
+      <column name="mno" type="float"/>
+      <column name="cena" type="float"/>
+      <column name="sleva" type="float"/>
+      <column name="mena_id" type="integer"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[id]</attribute>
+            <attribute name="canUpdate">false</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Objednavky" visPositionX="425" visPositionY="714" visSizeX="0" visSizeX2="105" visSizeY="0" visSizeY2="199">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="cislo_obj_id" required="true" type="integer" unique="true"/>
+      <column default="Přijato" name="typ" type="enum" values="Přijato,Odeslano,Doruceno,Stornováno"/>
+      <column default="Nezaplaceno" name="stav" type="enum" values="Nezaplaceno,Zaplaceno"/>
+      <column name="zakaznik_id" required="true" type="integer"/>
+      <column name="faktura_id" type="integer"/>
+      <column name="doprava_id" type="integer"/>
+      <column name="platba_id" type="integer"/>
+      <column name="pobocka_id" type="integer"/>
+      <column name="sleva" type="float"/>
+      <column name="celkem_dopl" type="float"/>
+      <column name="celkem" type="float"/>
+      <column name="mena_id" type="integer"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[id]</attribute>
+            <attribute name="canUpdate">false</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="PolozkyObj" visPositionX="622" visPositionY="714" visSizeX="0" visSizeX2="93" visSizeY="0" visSizeY2="129">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="obj_id" required="true" type="integer"/>
+      <column name="stav" type="enum" values="Skladem,Objednat,Stornováno,Vyskladneno"/>
+      <column name="zbozi_id" type="integer"/>
+      <column name="mno" type="float"/>
+      <column name="cena" type="float"/>
+      <column name="sleva" type="float"/>
+      <column name="mena_id" type="integer"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[id]</attribute>
+            <attribute name="canUpdate">false</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Skupina" visPositionX="813" visPositionY="714" visSizeX="0" visSizeX2="92" visSizeY="0" visSizeY2="87">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="name" required="true" size="50" type="string" unique="true"/>
+      <column name="title" required="true" size="50" type="string"/>
+      <column name="popis" type="clob"/>
+      <column name="sleva" type="float"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[name]</attribute>
+            <attribute name="canUpdate">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Zakaznik" visPositionX="987" visPositionY="714" visSizeX="0" visSizeX2="127" visSizeY="0" visSizeY2="297">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="username" required="true" size="50" type="string" unique="true"/>
+      <column name="email" required="true" size="255" type="string" unique="true"/>
+      <column name="password" required="true" size="128" type="string"/>
+      <column name="skupina_id" type="integer"/>
+      <column name="mena_id" type="integer"/>
+      <column name="jmeno" size="50" type="string"/>
+      <column name="prijmeni" size="50" type="string"/>
+      <column name="organizace" size="50" type="string"/>
+      <column name="ulice" size="50" type="string"/>
+      <column name="psc" size="6" type="string"/>
+      <column name="mesto" size="50" type="string"/>
+      <column name="dorucit_id" type="integer"/>
+      <column name="ico" size="15" type="string"/>
+      <column name="jmeno_ico" size="50" type="string"/>
+      <column name="prijmeni_ico" size="50" type="string"/>
+      <column name="organizace_ico" size="50" type="string"/>
+      <column name="ulice_ico" size="50" type="string"/>
+      <column name="psc_ico" size="6" type="string"/>
+      <column name="mesto_ico" size="50" type="string"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[username]</attribute>
+            <attribute name="canUpdate">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Kosik" visPositionX="1186" visPositionY="714" visSizeX="0" visSizeX2="111" visSizeY="0" visSizeY2="101">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="session_id" size="32" type="string"/>
+      <column name="zakaznik_id" type="integer"/>
+      <column name="zbozi_id" type="integer"/>
+      <column name="mena_id" type="integer"/>
+      <column name="mno" type="float"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Dodavatel" visPositionX="1377" visPositionY="714" visSizeX="0" visSizeX2="111" visSizeY="0" visSizeY2="143">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="mena_id" type="integer"/>
+      <column name="jmeno" size="50" type="string"/>
+      <column name="prijmeni" size="50" type="string"/>
+      <column name="organizace" size="50" type="string"/>
+      <column name="ulice" size="50" type="string"/>
+      <column name="psc" size="6" type="string"/>
+      <column name="mesto" size="50" type="string"/>
+      <column name="ico" size="15" type="string"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[organizace]</attribute>
+            <attribute name="canUpdate">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="DPH" visPositionX="49" visPositionY="1051" visSizeX="0" visSizeX2="92" visSizeY="0" visSizeY2="73">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="name" required="true" size="50" type="string" unique="true"/>
+      <column name="title" required="true" size="50" type="string"/>
+      <column name="sazba" required="true" type="integer"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[name]</attribute>
+            <attribute name="canUpdate">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Kategorie" visPositionX="228" visPositionY="1051" visSizeX="0" visSizeX2="117" visSizeY="0" visSizeY2="171">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="name" required="true" size="50" type="string" unique="true"/>
+      <column name="title" required="true" size="50" type="string"/>
+      <column name="parent_id" type="integer"/>
+      <column name="popis" type="clob"/>
+      <column name="poradi" type="integer"/>
+      <column name="enabled" type="boolean"/>
+      <column name="pozice" type="enum" values="Levý sloupec,Horní pruh,Dolní pruh"/>
+      <column name="typ" type="enum" values="Zboží,Stránky,Akce"/>
+      <column name="keywords" required="true" size="255" type="string"/>
+      <column name="description" required="true" size="255" type="string"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[name]</attribute>
+            <attribute name="canUpdate">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Akce" visPositionX="419" visPositionY="1051" visSizeX="0" visSizeX2="117" visSizeY="0" visSizeY2="269">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="kategorie_id" type="integer"/>
+      <column name="name" required="true" size="50" type="string" unique="true"/>
+      <column name="title" required="true" size="50" type="string"/>
+      <column name="perex" type="clob"/>
+      <column name="perex_img" type="string"/>
+      <column name="enabled" type="boolean"/>
+      <column name="zbozi_id" type="integer"/>
+      <column name="platne_od" type="timestamp"/>
+      <column name="platne_do" type="timestamp"/>
+      <column name="pocet_kusy" type="integer"/>
+      <column name="gallery_id" type="integer"/>
+      <column name="keywords" required="true" size="255" type="string"/>
+      <column name="description" required="true" size="255" type="string"/>
+      <column name="cena" type="float"/>
+      <column name="mena_id" type="integer"/>
+      <column name="sleva" type="float"/>
+      <column name="popis" type="clob"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[name]</attribute>
+            <attribute name="canUpdate">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Zbozi" visPositionX="610" visPositionY="1051" visSizeX="0" visSizeX2="117" visSizeY="0" visSizeY2="283">
+      <column auto-increment="true" name="zbozi_id" primary="true" type="integer"/>
+      <column name="kategorie_id" required="true" type="integer"/>
+      <column name="name" required="true" size="50" type="string" unique="true"/>
+      <column name="title" required="true" size="50" type="string"/>
+      <column name="perex" type="clob"/>
+      <column name="perex_img" type="string"/>
+      <column name="nazev_img" type="string"/>
+      <column name="baleni" size="40" type="string"/>
+      <column name="enabled" type="boolean"/>
+      <column name="gallery_id" type="integer"/>
+      <column name="keywords" required="true" size="255" type="string"/>
+      <column name="description" required="true" size="255" type="string"/>
+      <column name="cena" type="float"/>
+      <column name="dph_id" required="true" type="integer"/>
+      <column name="mena_id" required="true" type="integer"/>
+      <column name="popis" type="clob"/>
+      <column name="skladem" type="float"/>
+      <column default="1" name="min_mno" type="float"/>
+      <column name="dodavatel_id" type="integer"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[name]</attribute>
+            <attribute name="canUpdate">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="Slozeni" visPositionX="801" visPositionY="1051" visSizeX="0" visSizeX2="117" visSizeY="0" visSizeY2="157">
+      <column auto-increment="true" name="slozeni_id" primary="true" type="integer"/>
+      <column name="name" required="true" size="50" type="string" unique="true"/>
+      <column name="title" required="true" size="50" type="string"/>
+      <column name="perex" type="clob"/>
+      <column name="perex_img" type="string"/>
+      <column name="img" type="string"/>
+      <column name="popis" type="clob"/>
+      <column name="enabled" type="boolean"/>
+      <column name="keywords" required="true" size="255" type="string"/>
+      <column name="description" required="true" size="255" type="string"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+          <attribute name="Sluggable">
+            <attribute name="unique">true</attribute>
+            <attribute name="fields">[name]</attribute>
+            <attribute name="canUpdate">true</attribute>
+          </attribute>
+        </attribute>
+      </orm-properties>
+    </table>
+    <table name="SlozeniZbozi" visPositionX="1001" visPositionY="1051" visSizeX="0" visSizeX2="98" visSizeY="0" visSizeY2="60">
+      <column name="slozeni_id" primary="true" type="integer"/>
+      <column name="zbozi_id" primary="true" type="integer"/>
+    </table>
+    <table name="Ceny" visPositionX="1189" visPositionY="1051" visSizeX="0" visSizeX2="104" visSizeY="0" visSizeY2="157">
+      <column auto-increment="true" name="id" primary="true" type="integer"/>
+      <column name="zbozi_id" required="true" type="integer"/>
+      <column name="skupina_id" type="integer"/>
+      <column name="zakaznik_id" type="integer"/>
+      <column name="typ" type="enum" values="Cena,Sleva"/>
+      <column name="dle" type="enum" values="Skupina,Zakaznik"/>
+      <column name="cena" type="float"/>
+      <column name="mena_id" type="integer"/>
+      <column name="typ_slevy" type="enum" values="Cena,Procenta"/>
+      <column name="sleva" type="float"/>
+      <orm-properties>
+        <attribute name="actAs">
+          <attribute name="Timestampable"/>
+        </attribute>
+      </orm-properties>
+    </table>
+    <foreign-key from="Setting" name="FK_Setting_Mena_id" to="Mena">
+      <foreign-key-column from="hlavni_mena" to="id"/>
+    </foreign-key>
+    <foreign-key from="Setting" inverse-alias="SkupinaVychozi" name="FK_Setting_Skupina_id" to="Skupina">
+      <foreign-key-column from="vychozi_skupina_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Setting" inverse-alias="SkupinaHost" name="FK_Setting_Skupina_id2" to="Skupina">
+      <foreign-key-column from="skupina_host_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Setting" inverse-alias="SkupinaVel" name="FK_Setting_Skupina_id3" to="Skupina">
+      <foreign-key-column from="skupina_vel_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="WebPay" name="FK_WebPay_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="WebPay" name="FK_WebPay_ZemeUrceni_id" to="ZemeUrceni">
+      <foreign-key-column from="zeme_urceni_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="ePlatba" name="FK_ePlatba_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="ePlatba" name="FK_ePlatba_ZemeUrceni_id" to="ZemeUrceni">
+      <foreign-key-column from="zeme_urceni_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Stranky" name="FK_Stranky_Kategorie_id" to="Kategorie">
+      <foreign-key-column from="kategorie_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Stranky" name="FK_Stranky_Gallery_id" to="Gallery">
+      <foreign-key-column from="gallery_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Mena" name="FK_Mena_Zaokrouhleni_id" to="Zaokrouhleni">
+      <foreign-key-column from="zaokrouhleni_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="MenaKurz" inverse-alias="Vychozi" name="FK_MenaKurz_Mena_id" owning-alias="KurzVychoziMena" to="Mena">
+      <foreign-key-column from="vychozi_mena" to="id"/>
+    </foreign-key>
+    <foreign-key from="MenaKurz" inverse-alias="Cilova" name="FK_MenaKurz_Mena_id2" owning-alias="KurzCilovaMena" to="Mena">
+      <foreign-key-column from="cilova_mena" to="id"/>
+    </foreign-key>
+    <foreign-key from="MenaKurz" name="FK_MenaKurz_Zaokrouhleni_id" to="Zaokrouhleni">
+      <foreign-key-column from="zaokrouhleni_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="GalleryImage" name="FK_GalleryImage_Gallery_id" owning-alias="GalleryImages" to="Gallery">
+      <foreign-key-column from="gallery_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">CASCADE</attribute>
+        <attribute name="side-inverse"/>
+        <attribute name="side-owning">
+          <attribute name="type">many</attribute>
+        </attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="Doprava" name="FK_Doprava_ZemeUrceni_id" to="ZemeUrceni">
+      <foreign-key-column from="zeme_urceni_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Doprava" name="FK_Doprava_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="DopravaPobocka" name="FK_DopravaPobocka_Doprava_doprava_id" to="Doprava">
+      <foreign-key-column from="doprava_id" to="doprava_id"/>
+    </foreign-key>
+    <foreign-key from="DopravaPobocka" name="FK_DopravaPobocka_PobockyDoprava_pobocka_id" to="PobockyDoprava">
+      <foreign-key-column from="pobocka_id" to="pobocka_id"/>
+    </foreign-key>
+    <foreign-key from="PobockyDoprava" name="FK_PobockyDoprava_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Platba" name="FK_Platba_Doprava_doprava_id" to="Doprava">
+      <foreign-key-column from="doprava_id" to="doprava_id"/>
+    </foreign-key>
+    <foreign-key from="Platba" name="FK_Platba_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Faktura" name="FK_Faktura" to="FakturaObj">
+      <foreign-key-column from="faktura_obj_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Faktura" name="FK_Faktura_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Faktura" name="FK_Faktura_Zakaznik_id" to="Zakaznik">
+      <foreign-key-column from="zakaznik_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">CASCADE</attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="Faktura" name="FK_Faktura2" to="Objednavka" visSplitted="1">
+      <foreign-key-column from="objednavka_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Faktura" name="FK_Faktura_Doprava_doprava_id" to="Doprava">
+      <foreign-key-column from="doprava_id" to="doprava_id"/>
+    </foreign-key>
+    <foreign-key from="Faktura" name="FK_Faktura_Platba_id" to="Platba">
+      <foreign-key-column from="platba_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Faktura" name="FK_Faktura_PobockyDoprava_pobocka_id" to="PobockyDoprava">
+      <foreign-key-column from="pobocka_id" to="pobocka_id"/>
+    </foreign-key>
+    <foreign-key from="PolozkyFak" name="FK_PolozkyFak_Faktura_id" owning-alias="Polozky" to="Faktura">
+      <foreign-key-column from="faktura_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="PolozkyFak" name="FK_PolozkyFak_Zbozi_zbozi_id" to="Zbozi">
+      <foreign-key-column from="zbozi_id" to="zbozi_id"/>
+    </foreign-key>
+    <foreign-key from="PolozkyFak" name="FK_PolozkyFak_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Objednavky" name="FK_Objednavky_CisloObj_id" to="CisloObj">
+      <foreign-key-column from="cislo_obj_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Objednavky" name="FK_Objednavky_Zakaznik_id" to="Zakaznik">
+      <foreign-key-column from="zakaznik_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">CASCADE</attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="Objednavky" name="FK_Objednavky_Faktura_id" to="Faktura">
+      <foreign-key-column from="faktura_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Objednavky" name="FK_Objednavky_Doprava_doprava_id" to="Doprava">
+      <foreign-key-column from="doprava_id" to="doprava_id"/>
+    </foreign-key>
+    <foreign-key from="Objednavky" name="FK_Objednavky_Platba_id" to="Platba">
+      <foreign-key-column from="platba_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Objednavky" name="FK_Objednavky_PobockyDoprava_pobocka_id" to="PobockyDoprava">
+      <foreign-key-column from="pobocka_id" to="pobocka_id"/>
+    </foreign-key>
+    <foreign-key from="Objednavky" name="FK_Objednavky_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="PolozkyObj" name="FK_PolozkyObj_Objednavky_id" owning-alias="Polozky" to="Objednavky">
+      <foreign-key-column from="obj_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="PolozkyObj" name="FK_PolozkyObj_Zbozi_zbozi_id" to="Zbozi">
+      <foreign-key-column from="zbozi_id" to="zbozi_id"/>
+    </foreign-key>
+    <foreign-key from="PolozkyObj" name="FK_PolozkyObj_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Zakaznik" name="FK_Zakaznik_Skupina_id" to="Skupina">
+      <foreign-key-column from="skupina_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">CASCADE</attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="Zakaznik" name="FK_Zakaznik_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">CASCADE</attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="Zakaznik" name="FK_Zakaznik_ZemeUrceni_id" to="ZemeUrceni">
+      <foreign-key-column from="dorucit_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Kosik" name="FK_Kosik_Zakaznik_id" to="Zakaznik">
+      <foreign-key-column from="zakaznik_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Kosik" name="FK_Kosik_Zbozi_zbozi_id" to="Zbozi">
+      <foreign-key-column from="zbozi_id" to="zbozi_id"/>
+    </foreign-key>
+    <foreign-key from="Kosik" name="FK_Kosik_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Dodavatel" name="FK_Dodavatel_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+      <orm-properties>
+        <attribute name="onDelete">CASCADE</attribute>
+      </orm-properties>
+    </foreign-key>
+    <foreign-key from="Kategorie" inverse-alias="KategorieParent" name="FK_Kategorie_Kategorie_id" to="Kategorie" visCenterX="0" visCenterY="-20">
+      <foreign-key-column from="parent_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Akce" name="FK_Akce_Kategorie_id" to="Kategorie">
+      <foreign-key-column from="kategorie_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Akce" name="FK_Akce_Gallery_id" to="Gallery">
+      <foreign-key-column from="gallery_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Akce" name="FK_Akce_Zbozi_zbozi_id" to="Zbozi">
+      <foreign-key-column from="zbozi_id" to="zbozi_id"/>
+    </foreign-key>
+    <foreign-key from="Akce" name="FK_Akce_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Zbozi" name="FK_Zbozi_Kategorie_id" to="Kategorie">
+      <foreign-key-column from="kategorie_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Zbozi" name="FK_Zbozi_Gallery_id" to="Gallery">
+      <foreign-key-column from="gallery_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Zbozi" name="FK_Zbozi_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Zbozi" name="FK_Zbozi_DPH_id" to="DPH">
+      <foreign-key-column from="dph_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Zbozi" name="FK_Zbozi_Dodavatel_id" to="Dodavatel">
+      <foreign-key-column from="dodavatel_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="SlozeniZbozi" name="FK_SlozeniZbozi_Zbozi_zbozi_id" to="Zbozi">
+      <foreign-key-column from="slozeni_id" to="zbozi_id"/>
+    </foreign-key>
+    <foreign-key from="SlozeniZbozi" name="FK_SlozeniZbozi_Slozeni_slozeni_id" to="Slozeni">
+      <foreign-key-column from="zbozi_id" to="slozeni_id"/>
+    </foreign-key>
+    <foreign-key from="Ceny" name="FK_Ceny_Zbozi_zbozi_id" to="Zbozi">
+      <foreign-key-column from="zbozi_id" to="zbozi_id"/>
+    </foreign-key>
+    <foreign-key from="Ceny" name="FK_Ceny_Skupina_id" to="Skupina">
+      <foreign-key-column from="skupina_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Ceny" name="FK_Ceny_Zakaznik_id" to="Zakaznik">
+      <foreign-key-column from="zakaznik_id" to="id"/>
+    </foreign-key>
+    <foreign-key from="Ceny" name="FK_Ceny_Mena_id" to="Mena">
+      <foreign-key-column from="mena_id" to="id"/>
+    </foreign-key>
+    <many-to-many-relation mn-table="DopravaPobocka">
+      <many-to-many-foreign-key foreign-key="FK_DopravaPobocka_Doprava_doprava_id"/>
+      <many-to-many-foreign-key foreign-key="FK_DopravaPobocka_PobockyDoprava_pobocka_id" relation-alias="PobockyDoprava"/>
+    </many-to-many-relation>
+    <many-to-many-relation mn-table="SlozeniZbozi">
+      <many-to-many-foreign-key foreign-key="FK_SlozeniZbozi_Zbozi_zbozi_id"/>
+      <many-to-many-foreign-key foreign-key="FK_SlozeniZbozi_Slozeni_slozeni_id" relation-alias="Slozeni"/>
+    </many-to-many-relation>
+  </module>
+
+</orm-designer>

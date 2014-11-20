@@ -1,0 +1,20 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+
+all:
+  sf_guard_plugin:
+    routes_register: false
+
+  sf_media_browser:
+    root_dir:               /uploads       # Browsable root directory relative to sf_web_dir
+    thumbnails_enabled:     true           # Enable thumbnail creation on upload (requires sfThumnailPlugin)
+    assets_list:
+      js:  
+        - /sfMediaBrowserPlugin/js/list.js # You should disable this line if you use JQuery.
+      # If you use jquery (not included so get jquery.js and jquery.dragndrop.js), enable these :                                    
+        - /js/jquery.js                    # Core JQuery framework file.
+        - /js/jquery.dragndrop.js          # This is presumed to be a bundle of jquery ui draggable and droppable.
+        - /sfMediaBrowserPlugin/js/list.jquery.js # This included file is specific to sfMediaBrowser list template.
+        

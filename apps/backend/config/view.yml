@@ -1,0 +1,25 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Lekarna pro radost - administrace
+    #description:  symfony project
+    #keywords:     symfony, project
+    language:     cs
+    robots:       noindex, nofollow
+
+  stylesheets:    [admin.css,jquery-ui-1.8.custom.css]
+
+  javascripts:
+    - jquery-1.4.4.min.js
+    - tiny_mce/tiny_mce.js
+    - jquery-ui-1.8.10.custom.min.js
+    - /sfMediaBrowserPlugin/js/WindowManager.js
+    - site.js
+
+  has_layout:     true
+  layout:         layout
